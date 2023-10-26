@@ -1,0 +1,1501 @@
+/*스마트폰 화면 스타일*/
+@media (max-width: 399px) {
+  #modal_bg {
+    display: none;
+    /* position: relative; */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  /*모달창 닫기*/
+  button.modal_close {
+    z-index: 1100;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    top: 15px;
+    right: 3%;
+    font-size: 100%;
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+  }
+
+  /*모달창 div*/
+  #modal_bg #modalWrap {
+    z-index: 1100;
+    width: 100%;
+    height: 100%;
+    /* max-height: 900px; 모달의 최대 높이 */
+    padding: 5px;
+    transform: translate(0%, 0%);
+    height: 900px;
+    background: #555;
+    border: 0px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  #modaled_info {
+    /* position: relative; */
+    width: 100%;
+    height: 500px;
+    padding-bottom: 200px;
+    line-height: 23px;
+    border: 1px solid #ccc;
+  }
+
+  #modaled_info .info_div {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #modaled_info iframe {
+    border: 1px solid red;
+    width: 100%;
+    height: 300px;
+  }
+
+  /*반투명용div*/
+
+  /* 10-19  모달 카테고리 css*/
+  #modalWrap #info_list_wrap {
+    padding: 5px;
+    margin: 5px;
+    height: 7%;
+    width: 100%;
+    border-bottom: 3px solid rgb(126, 124, 124);
+    font-size: 30px;
+  }
+  #modalWrap #info_list_wrap ul#info_list {
+    overflow-x: auto;
+    margin: 0 auto;
+    width: 92%;
+    border: 0px solid black;
+    position: relative;
+    left: 30px;
+  }
+
+  .modal_dsr {
+    overflow: hidden;
+    width: 100%;
+    height: 95px;
+    border: 0px solid black;
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li {
+    float: left;
+    margin-right: 10px;
+  }
+  #modalWrap #info_list_wrap ul#info_list li button {
+    width: 90px;
+    padding: 0px 20px;
+    height: 50px;
+    font-size: 9px;
+    color: lightgray; /* 정미 수정 */
+    text-align: center;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #666; /* 정미 수정 */
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li button:hover {
+    background-color: darkred; /* 정미 수정 */
+  }
+
+  /* 10-19  모달 카테고리 css*/
+
+  /* 회차 */
+  #movieRoundList_wrap {
+    padding: 5px;
+    width: 100%;
+    background-color: #555;
+  }
+
+  .movie-link {
+    width: 100%;
+  }
+
+  .movieRoundList2 {
+    height: 140px;
+    margin: 5px;
+    padding: 20px 20px 5px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    position: relative;
+    color: white;
+  }
+
+  .movieRoundList2 img {
+    border: 0px solid black;
+    float: left;
+  }
+
+  #movieRoundList_wrap :hover img {
+    filter: brightness(0.5);
+  }
+
+  #movieRoundList_wrap .movieRoundList {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    height: 160px;
+    border: 0px solid black;
+  }
+
+  .movieRoundList img {
+    width: 200px;
+    height: 100px;
+    left: 30px;
+  }
+
+  .movieRoundList p.movieRound_Ep {
+    position: relative;
+    color: black;
+    left: 0px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_Ep2 {
+    position: absolute;
+    color: white;
+    top: 55px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_sangyoung {
+    position: absolute;
+    color: black;
+    right: 20px;
+    font-size: 14px;
+    top: 35px;
+  }
+
+  #movieRoundList_wrap #NoRound {
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    height: 300px;
+    color: black;
+    font-size: 30px;
+  }
+
+  p#NoRound i {
+    font-size: 200px;
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* 회차끝 */
+
+  /* 코맨트 */
+  #ipb {
+    background-color: #555;
+    padding: 5px;
+    width: 100%;
+  }
+
+  #ipb #commentSection {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #ipb #commentSection i {
+    font-size: 150px;
+    text-align: center;
+    margin-top: 23px;
+  }
+
+  #ipb #modalInputBox {
+    padding: 10px;
+    border: 3px solid black;
+    text-align: right;
+    width: 100%;
+  }
+
+  #ipb #modalInputBox #commentInput {
+    padding: 10px;
+    border: 1px solid black;
+    width: 66%;
+    height: 28px;
+    position: absolute;
+    left: 20px;
+    background-color: white;
+  }
+
+  #ipb #modalInputBox .ipBtn {
+    padding: 10px;
+    border: 1px solid black;
+    width: 20%;
+    height: 50px;
+  }
+
+  /* 코맨트끝 */
+
+  /* 관련 콘텐 div */
+  #rel_contents {
+    padding: 10px;
+    width: 100%;
+    border: 0px solid blue;
+  }
+
+  .rel_content {
+    border: 1px solid darkgray;
+    float: left;
+    width: 300px;
+    height: 320px;
+    margin: 29px;
+    border-radius: 5px;
+    line-height: 25px;
+    font-size: 16px;
+    background-color: darkgray;
+    position: relative;
+  }
+
+  /* sw 10-19 수정 */
+
+  .main-image img {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .tit {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    top: 160px;
+    left: 10px;
+    color: white;
+  }
+  .ty {
+    position: absolute;
+    font-size: 16px;
+    top: 190px;
+    left: 10px;
+    color: white;
+  }
+  .ag {
+    position: absolute;
+    font-size: 16px;
+    top: 160px;
+    right: 30px;
+    color: white;
+  }
+
+  /* 모달 관련 콘텐츠 버튼 */
+  #rel_contents button.modal_button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 10px;
+    color: black;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 25px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  #rel_contents button.ggim_button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 70px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 25px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  #rel_contents button.ggimed_button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 70px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: green;
+  }
+
+  #rel_contents img:hover {
+    filter: brightness(0.6);
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  /*나이별 색깔*/
+  span.AgeRed {
+    color: red;
+  }
+  span.AgeGreen {
+    color: green;
+  }
+  span.AgeYellow {
+    color: yellow;
+  }
+}
+
+/*스마트폰 화면 스타일*/
+@media (min-width: 400px) and (max-width: 767px) {
+  #modal_bg {
+    display: none;
+    /* position: relative; */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  /*모달창 닫기*/
+  button.modal_close {
+    z-index: 1100;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    top: 15px;
+    right: 3%;
+    font-size: 100%;
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+  }
+
+  /*모달창 div*/
+  #modal_bg #modalWrap {
+    z-index: 1100;
+    width: 100%;
+    height: 100%;
+    /* max-height: 900px; 모달의 최대 높이 */
+    padding: 5px;
+    transform: translate(0%, 0%);
+    height: 900px;
+    background: #555;
+    border: 0px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  #modaled_info {
+    /* position: relative; */
+    width: 100%;
+    height: 500px;
+    padding-bottom: 200px;
+    line-height: 23px;
+    border: 1px solid #ccc;
+  }
+
+  #modaled_info .info_div {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #modaled_info iframe {
+    border: 1px solid red;
+    width: 100%;
+    height: 300px;
+  }
+
+  /*반투명용div*/
+
+  /* 10-19  모달 카테고리 css*/
+  #modalWrap #info_list_wrap {
+    padding: 5px;
+    margin: 5px;
+    height: 7%;
+    width: 100%;
+    border-bottom: 3px solid rgb(126, 124, 124);
+    font-size: 30px;
+  }
+  #modalWrap #info_list_wrap ul#info_list {
+    overflow-x: auto;
+    margin: 0 auto;
+    width: 92%;
+    border: 0px solid black;
+    position: relative;
+    left: 30px;
+  }
+
+  .modal_dsr {
+    overflow: hidden;
+    width: 100%;
+    height: 95px;
+    border: 0px solid black;
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li {
+    float: left;
+    margin-right: 10px;
+  }
+  #modalWrap #info_list_wrap ul#info_list li button {
+    width: 90px;
+    padding: 0px 20px;
+    height: 50px;
+    font-size: 9px;
+    color: lightgray; /* 정미 수정 */
+    text-align: center;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #666; /* 정미 수정 */
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li button:hover {
+    background-color: darkred; /* 정미 수정 */
+  }
+
+  /* 10-19  모달 카테고리 css*/
+
+  /* 회차 */
+  #movieRoundList_wrap {
+    padding: 5px;
+    width: 100%;
+    background-color: #555;
+  }
+
+  .movie-link {
+    width: 100%;
+  }
+
+  .movieRoundList2 {
+    height: 140px;
+    margin: 5px;
+    padding: 20px 20px 5px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    position: relative;
+    color: white;
+  }
+
+  .movieRoundList2 img {
+    border: 0px solid black;
+    float: left;
+  }
+
+  #movieRoundList_wrap :hover img {
+    filter: brightness(0.5);
+  }
+
+  #movieRoundList_wrap .movieRoundList {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    height: 160px;
+    border: 0px solid black;
+  }
+
+  .movieRoundList img {
+    width: 200px;
+    height: 100px;
+    left: 30px;
+  }
+
+  .movieRoundList p.movieRound_Ep {
+    position: relative;
+    color: black;
+    left: 0px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_Ep2 {
+    position: absolute;
+    color: white;
+    top: 55px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_sangyoung {
+    position: absolute;
+    color: black;
+    right: 20px;
+    font-size: 14px;
+    top: 35px;
+  }
+
+  #movieRoundList_wrap #NoRound {
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    height: 300px;
+    color: black;
+    font-size: 30px;
+  }
+
+  p#NoRound i {
+    font-size: 200px;
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* 회차끝 */
+
+  /* 코맨트 */
+  #ipb {
+    background-color: #555;
+    padding: 5px;
+    width: 100%;
+  }
+
+  #ipb #commentSection {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #ipb #commentSection i {
+    font-size: 150px;
+    text-align: center;
+    margin-top: 23px;
+  }
+
+  #ipb #modalInputBox {
+    padding: 10px;
+    border: 3px solid black;
+    text-align: right;
+    width: 100%;
+  }
+
+  #ipb #modalInputBox #commentInput {
+    padding: 10px;
+    border: 1px solid black;
+    width: 66%;
+    height: 28px;
+    position: absolute;
+    left: 20px;
+    background-color: white;
+  }
+
+  #ipb #modalInputBox .ipBtn {
+    padding: 10px;
+    border: 1px solid black;
+    width: 20%;
+    height: 50px;
+  }
+
+  /* 코맨트끝 */
+
+  /* 관련 콘텐 div */
+  #rel_contents {
+    padding: 10px;
+    width: 100%;
+    border: 0px solid blue;
+  }
+
+  .rel_content {
+    border: 1px solid darkgray;
+    float: left;
+    width: 300px;
+    height: 320px;
+    margin: 29px;
+    border-radius: 5px;
+    line-height: 25px;
+    font-size: 16px;
+    background-color: darkgray;
+    position: relative;
+  }
+
+  /* sw 10-19 수정 */
+
+  .main-image img {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .tit {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    top: 160px;
+    left: 10px;
+    color: white;
+  }
+  .ty {
+    position: absolute;
+    font-size: 16px;
+    top: 190px;
+    left: 10px;
+    color: white;
+  }
+  .ag {
+    position: absolute;
+    font-size: 16px;
+    top: 160px;
+    right: 30px;
+    color: white;
+  }
+
+  /* 모달 관련 콘텐츠 버튼 */
+  #rel_contents button.modal_button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 10px;
+    color: black;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 25px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  #rel_contents button.ggim_button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 70px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 25px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  #rel_contents button.ggimed_button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 70px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: green;
+  }
+
+  #rel_contents img:hover {
+    filter: brightness(0.6);
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  /*나이별 색깔*/
+  span.AgeRed {
+    color: red;
+  }
+  span.AgeGreen {
+    color: green;
+  }
+  span.AgeYellow {
+    color: yellow;
+  }
+}
+
+/*태블릿 피씨 화면 스타일*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  #modal_bg {
+    display: none;
+    /* position: relative; */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  /*모달창 닫기*/
+  button.modal_close {
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 100%;
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+  }
+
+  /*모달창 div*/
+  #modal_bg #modalWrap {
+    z-index: 1100;
+    width: 50%;
+    /* max-height: 900px; 모달의 최대 높이 */
+    padding: 5px;
+    transform: translate(3%, 4%);
+    height: 900px;
+    background: #555;
+    border: 0px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  #modaled_info {
+    /* position: relative; */
+    width: 100%;
+    height: 500px;
+    padding-bottom: 200px;
+    line-height: 23px;
+    border: 1px solid #ccc;
+  }
+
+  #modaled_info .info_div {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #modaled_info iframe {
+    border: 1px solid red;
+    width: 100%;
+    height: 300px;
+  }
+
+  /*반투명용div*/
+
+  /* 10-19  모달 카테고리 css*/
+  #modalWrap #info_list_wrap {
+    padding: 5px;
+    margin: 5px;
+    height: 7%;
+    width: 99%;
+    border-bottom: 3px solid rgb(126, 124, 124);
+    font-size: 30px;
+  }
+
+  .modal_dsr {
+    overflow: hidden;
+    width: 100%;
+    height: 95px;
+    border: 0px solid black;
+  }
+
+  #modalWrap #info_list_wrap ul#info_list {
+    overflow-x: auto;
+    margin: 0 auto;
+    width: 100%;
+    border: 0px solid black;
+    position: relative;
+    /* left: -20px; */
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li {
+    /* width: 20%; */
+    /* margin: 0 30px; */
+    float: left;
+    margin-right: 10px;
+    border: 0px solid red;
+  }
+  #modalWrap #info_list_wrap ul#info_list li button {
+    width: 100px;
+    padding: 0px 20px;
+    height: 50px;
+    font-size: 10px;
+    color: lightgray; /* 정미 수정 */
+    text-align: center;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #666; /* 정미 수정 */
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li button:hover {
+    background-color: darkred; /* 정미 수정 */
+  }
+
+  /* 10-19  모달 카테고리 css*/
+
+  /* 회차 */
+  #movieRoundList_wrap {
+    padding: 5px;
+    width: 100%;
+    background-color: #555;
+  }
+
+  .movie-link {
+    width: 100%;
+  }
+
+  .movieRoundList2 {
+    height: 140px;
+    margin: 20px;
+    padding: 20px 20px 5px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    position: relative;
+    color: white;
+  }
+
+  .movieRoundList2 img {
+    border: 0px solid black;
+    float: left;
+  }
+
+  #movieRoundList_wrap :hover img {
+    filter: brightness(0.5);
+  }
+
+  #movieRoundList_wrap .movieRoundList {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    height: 160px;
+    border: 0px solid black;
+  }
+
+  .movieRoundList img {
+    width: 200px;
+    height: 100px;
+    left: 30px;
+  }
+
+  .movieRoundList p.movieRound_Ep {
+    position: absolute;
+    color: black;
+    left: 240px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_Ep2 {
+    position: absolute;
+    color: white;
+    top: 65px;
+    left: 8px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_sangyoung {
+    position: absolute;
+    color: black;
+    top: 35px;
+    right: 10px;
+    font-size: 14px;
+  }
+
+  #movieRoundList_wrap #NoRound {
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    height: 300px;
+    color: black;
+    font-size: 30px;
+  }
+
+  p#NoRound i {
+    font-size: 200px;
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* 회차끝 */
+
+  /* 코맨트 */
+  #ipb {
+    background-color: #555;
+    padding: 5px;
+    width: 100%;
+  }
+
+  #ipb #commentSection {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #ipb #commentSection i {
+    font-size: 150px;
+    text-align: center;
+    margin-top: 23px;
+  }
+
+  #ipb #modalInputBox {
+    padding: 10px;
+    border: 3px solid black;
+    text-align: right;
+    width: 100%;
+  }
+
+  #ipb #modalInputBox #commentInput {
+    padding: 10px;
+    border: 1px solid black;
+    width: 73%;
+    height: 28px;
+    position: absolute;
+    left: 20px;
+    background-color: white;
+  }
+
+  #ipb #modalInputBox .ipBtn {
+    padding: 10px;
+    border: 1px solid black;
+    width: 15%;
+    height: 50px;
+  }
+
+  /* 코맨트끝 */
+
+  /* 관련 콘텐 div */
+  #rel_contents {
+    /* padding: 0px; */
+    width: 100%;
+    border: 0px solid blue;
+    position: fixed;
+  }
+
+  .rel_content {
+    border: 1px solid darkgray;
+    float: left;
+    width: 220px;
+    height: 300px;
+    margin: 5px 3%; /*10.24 sw 수정*/
+    border-radius: 5px;
+    line-height: 25px;
+    font-size: 16px;
+    background-color: darkgray;
+    position: relative;
+  }
+
+  /* sw 10-19 수정 */
+
+  .main-image img {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .tit {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    top: 160px;
+    left: 10px;
+    color: white;
+  }
+  .ty {
+    position: absolute;
+    font-size: 12px;
+    top: 180px;
+    left: 10px;
+    color: white;
+  }
+  .ag {
+    position: absolute;
+    font-size: 13px;
+    top: 160px;
+    right: 15px; /*10.24 sw 수정*/
+    color: white;
+  }
+
+  /* 모달 관련 콘텐츠 버튼 */
+  #rel_contents button.modal_button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 5px;
+    color: black;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  #rel_contents button.ggim_button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 50px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  #rel_contents button.ggimed_button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 50px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 22.5px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: green;
+  }
+
+  #rel_contents img:hover {
+    filter: brightness(0.6);
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  /*나이별 색깔*/
+  span.AgeRed {
+    color: red;
+  }
+  span.AgeGreen {
+    color: green;
+  }
+  span.AgeYellow {
+    color: yellow;
+  }
+}
+
+/*피씨 화면 스타일*/
+@media (min-width: 1024px) {
+  #modal_bg {
+    display: none;
+    /* position: relative; */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  /*모달창 닫기*/
+  button.modal_close {
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 100%;
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+  }
+
+  /*모달창 div*/
+  #modal_bg #modalWrap {
+    z-index: 1100;
+    width: 40%;
+    /* max-height: 900px; 모달의 최대 높이 */
+    padding: 5px;
+    transform: translate(3%, 4%);
+    height: 900px;
+    background: #555;
+    border: 0px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  #modaled_info {
+    /* position: relative; */
+    width: 100%;
+    height: 500px;
+    padding-bottom: 200px;
+    line-height: 23px;
+    border: 1px solid #ccc;
+  }
+
+  #modaled_info .info_div {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #modaled_info iframe {
+    border: 1px solid red;
+    width: 100%;
+    height: 300px;
+  }
+
+  /*반투명용div*/
+
+  /* 10-19  모달 카테고리 css*/
+  #modalWrap #info_list_wrap {
+    padding: 5px;
+    margin: 5px;
+    height: 7%;
+    width: 99%;
+    border-bottom: 3px solid rgb(126, 124, 124);
+    font-size: 30px;
+  }
+  #modalWrap #info_list_wrap ul#info_list {
+    overflow-x: auto;
+    margin: 0 auto;
+    width: 90%;
+    border: 0px solid black;
+    position: relative;
+    /* left: -20px; */
+  }
+
+  .modal_dsr {
+    overflow: hidden;
+    width: 100%;
+    height: 95px;
+    border: 0px solid black;
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li {
+    /* width: 20%; */
+    /* margin: 0 30px; */
+    float: left;
+    margin-right: 10px;
+    border: 0px solid red;
+  }
+  #modalWrap #info_list_wrap ul#info_list li button {
+    width: 100px;
+    padding: 0px 20px;
+    height: 50px;
+    font-size: 10px;
+    color: lightgray; /* 정미 수정 */
+    text-align: center;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #666; /* 정미 수정 */
+  }
+
+  #modalWrap #info_list_wrap ul#info_list li button:hover {
+    background-color: darkred; /* 정미 수정 */
+  }
+
+  /* 10-19  모달 카테고리 css*/
+
+  /* 회차 */
+  #movieRoundList_wrap {
+    padding: 5px;
+    width: 100%;
+    background-color: #555;
+  }
+
+  .movie-link {
+    width: 100%;
+  }
+
+  .movieRoundList2 {
+    height: 140px;
+    margin: 20px;
+    padding: 20px 20px 5px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    position: relative;
+    color: white;
+  }
+
+  .movieRoundList2 img {
+    border: 0px solid black;
+    float: left;
+  }
+
+  #movieRoundList_wrap :hover img {
+    filter: brightness(0.5);
+  }
+
+  #movieRoundList_wrap .movieRoundList {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    height: 160px;
+    border: 0px solid black;
+  }
+
+  .movieRoundList img {
+    width: 200px;
+    height: 100px;
+    left: 30px;
+  }
+
+  .movieRoundList p.movieRound_Ep {
+    position: absolute;
+    color: black;
+    left: 240px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_Ep2 {
+    position: absolute;
+    color: white;
+    top: 65px;
+    left: 8px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .movieRoundList p.movieRound_sangyoung {
+    position: absolute;
+    color: black;
+    top: 35px;
+    right: 10px;
+    font-size: 14px;
+  }
+
+  #movieRoundList_wrap #NoRound {
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    height: 300px;
+    color: black;
+    font-size: 30px;
+  }
+
+  p#NoRound i {
+    font-size: 200px;
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* 회차끝 */
+
+  /* 코맨트 */
+  #ipb {
+    background-color: #555;
+    padding: 5px;
+    width: 100%;
+  }
+
+  #ipb #commentSection {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #ipb #commentSection i {
+    font-size: 150px;
+    text-align: center;
+    margin-top: 23px;
+  }
+
+  #ipb #modalInputBox {
+    padding: 10px;
+    border: 3px solid black;
+    text-align: right;
+    width: 100%;
+  }
+
+  #ipb #modalInputBox #commentInput {
+    padding: 10px;
+    border: 1px solid black;
+    width: 73%;
+    height: 28px;
+    position: absolute;
+    left: 20px;
+    background-color: white;
+  }
+
+  #ipb #modalInputBox .ipBtn {
+    padding: 10px;
+    border: 1px solid black;
+    width: 15%;
+    height: 50px;
+  }
+
+  /* 코맨트끝 */
+
+  /* 관련 콘텐 div */
+  #rel_contents {
+    /* padding: 0px; */
+    width: 100%;
+    border: 0px solid blue;
+  }
+
+  .rel_content {
+    border: 1px solid darkgray;
+    float: left;
+    width: 170px;
+    height: 300px;
+    margin: 5px 3%; /*10.24 sw 수정*/
+    border-radius: 5px;
+    line-height: 25px;
+    font-size: 16px;
+    background-color: darkgray;
+    position: relative;
+  }
+
+  /* sw 10-19 수정 */
+
+  .main-image img {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .tit {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    top: 160px;
+    left: 10px;
+    color: white;
+  }
+  .ty {
+    position: absolute;
+    font-size: 12px;
+    top: 180px;
+    left: 10px;
+    color: white;
+  }
+  .ag {
+    position: absolute;
+    font-size: 13px;
+    top: 160px;
+    right: 15px; /*10.24 sw 수정*/
+    color: white;
+  }
+
+  /* 모달 관련 콘텐츠 버튼 */
+  #rel_contents button.modal_button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 5px;
+    color: black;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  #rel_contents button.ggim_button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 50px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  #rel_contents button.ggimed_button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 50px;
+    color: red;
+    font-size: 300%;
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: 22.5px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: green;
+  }
+
+  #rel_contents img:hover {
+    filter: brightness(0.6);
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  /*나이별 색깔*/
+  span.AgeRed {
+    color: red;
+  }
+  span.AgeGreen {
+    color: green;
+  }
+  span.AgeYellow {
+    color: yellow;
+  }
+}

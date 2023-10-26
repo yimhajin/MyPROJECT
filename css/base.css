@@ -1,0 +1,43 @@
+/*############################################################
+* 기본 css
+* @author TEAM-ONE BY 정미
+* 2023.10.11 ~
+############################################################*/
+
+/*여백초기화*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*기본불릿없앰*/
+ul li,
+ol li {
+  list-style: none;
+}
+
+/*폼관련스타일*/
+fieldset {
+  border: none 0;
+}
+
+legend {
+  display: none;
+}
+
+/*기본스타일*/
+body {
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #181811;
+  color: white;
+  overflow-x: hidden; /* 10.19 수정 (index 주목할 만한 한국 콘텐츠 스크롤 생기는 것 x */
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}

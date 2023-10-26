@@ -1,0 +1,190 @@
+/*############################################################
+* 푸터 css
+* @author TEAM-ONE BY 정미
+* 2023.10.11 ~
+############################################################*/
+@media (max-width: 399px) {
+  /* Footer 영역 */
+  div#wrap footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div#wrap footer div ul li {
+    float: left;
+    padding: 4px;
+  }
+  div#wrap footer div ul li:nth-child(6) {
+    border-right: 0px solid gray;
+    display: none;
+  }
+  div#wrap footer div ul li:last-child {
+    border-right: none;
+    display: none;
+  }
+  div#wrap footer div ul li a,
+  a:visited {
+    color: gray;
+    font-size: 8px;
+    text-decoration: none;
+  }
+
+  div#wrap footer div ul > li > a:hover {
+    text-decoration: underline;
+  }
+
+  /* 로고 그레이 */
+  div#wrap footer > h1,
+  img.logo_g {
+    width: 80px;
+    margin: 0px auto;
+    padding-top: 5px;
+  }
+  /* 카피라이터 */
+  div#wrap footer p.copyright {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 8px;
+    color: gray;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  /* Footer 영역 */
+  div#wrap footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div#wrap footer div ul li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    border-right: 1px solid gray;
+  }
+  div#wrap footer div ul li:nth-child(6) {
+    border-right: 0px solid gray;
+  }
+  div#wrap footer div ul li:last-child {
+    display: none;
+  }
+  div#wrap footer div ul li a,
+  a:visited {
+    color: gray;
+    padding: 5px 5px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    text-decoration: none;
+  }
+  div#wrap footer div ul > li > a:hover {
+    text-decoration: underline;
+  }
+
+  /* 로고 그레이 */
+  div#wrap footer > h1,
+  img.logo_g {
+    width: 120px;
+    margin: 5px auto;
+    padding-top: 5px;
+  }
+  /* 카피라이터 */
+  div#wrap footer p.copyright {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 10px;
+    color: gray;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Footer 영역 */
+  div#wrap footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div#wrap footer div ul li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    border-right: 1px solid gray;
+  }
+  div#wrap footer div ul li:nth-child(6) {
+    border-right: 0px solid gray;
+  }
+  div#wrap footer div ul li:last-child {
+    display: none;
+  }
+  div#wrap footer div ul li a,
+  a:visited {
+    color: gray;
+    padding: 15px 15px;
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+  div#wrap footer div ul > li > a:hover {
+    text-decoration: underline;
+  }
+
+  /* 로고 그레이 */
+  div#wrap footer > h1,
+  img.logo_g {
+    width: 120px;
+    margin: 15px auto;
+    padding-top: 3px;
+  }
+  /* 카피라이터 */
+  div#wrap footer p.copyright {
+    display: block;
+    padding-top: 10px;
+    font-size: 0.8em;
+    color: gray;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Footer 영역 */
+  div#wrap footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div#wrap footer div ul li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    border-right: 1px solid gray;
+  }
+  div#wrap footer div ul li:nth-child(6) {
+    border-right: 0px solid gray;
+  }
+  div#wrap footer div ul li:last-child {
+    display: none;
+  }
+  div#wrap footer div ul li a,
+  a:visited {
+    color: gray;
+    padding: 20px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  div#wrap footer div ul > li > a:hover {
+    text-decoration: underline;
+  }
+
+  /* 로고 그레이 */
+  div#wrap footer > h1,
+  img.logo_g {
+    width: 140px;
+    margin: 20px auto;
+    padding-top: 10px;
+  }
+  /* 카피라이터 */
+  div#wrap footer p.copyright {
+    display: block;
+    padding-top: 20px;
+    font-size: 1em;
+    color: gray;
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "topten": [
+    {
+      "title": "화란",
+      "type": "영화",
+      "year": "2023",
+      "src": "./images/contents/top01.jpg",
+      "m_src": "https://www.youtube.com/embed/Uymqwzloigw?si=vbYlDnFBQe5Vc1AD",
+      "h_src": "./images/Play3.png",
+      "description": "124분",
+      "age_grade": "15",
+      "ContentIntroduction": "지옥 같은 현실에서 벗어나고 싶은 소년 ‘연규’가 조직의 중간 보스 ‘치건’을 만나 위태로운 세계에 함께 하게 되며 펼쳐지는 이야기 ",
+      "alt": ""
+    },
+    {
+      "title": "30일",
+      "type": "영화",
+      "year": "2023",
+      "src": "./images/contents/top02.jpg",
+      "m_src": "https://www.youtube.com/embed/SVql7FMUbDE?si=jgS0_o4EfScb-KLZ",
+      "h_src": "./images/Play3.png",
+      "duration": "119분",
+      "age_grade": "12",
+      "ContentIntroduction": "“완벽한 저에게 신은 저 여자를 던지셨죠” 지성과 외모 그리고 찌질함까지 타고난, '정열'(강하늘). “모기 같은 존재죠. 존재의 이유를 모르겠는?” 능력과 커리어 그리고 똘기까지 타고난, '나라'(정소민). 영화처럼 만나 영화같은 사랑을 했지만 서로의 찌질함과 똘기를 견디다 못해 마침내 완벽한 남남이 되기로 한다. 그러나! 완벽한 이별을 딱 D-30 앞둔 이들에게 찾아온 것은... 동반기억상실? ",
+      "description": "",
+      "alt": ""
+    },
+    {
+      "title": "1947 보스톤",
+      "type": "영화",
+      "src": "./images/contents/top03.jpg",
+      "m_src": "https://www.youtube.com/embed/dZ3G2Fkf7U4?si=sPluka5CkPZdUjzT",
+      "description": "나라가 독립을 했으면 당연히 우리 기록도 독립이 되어야지!",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "12",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": ""
+    },
+    {
+      "title": "밀수",
+      "type": "영화",
+      "src": "./images/contents/top04.jpg",
+      "m_src": "https://www.youtube.com/embed/Yh7J-HhXZjw?si=2x4QR-VYRUJOQekB",
+      "description": "주인공 엄진숙과는 둘도 없는 절친이자 친자매같은 사이로, 성공을 꿈꾸며 밀수판에 뛰어든 해녀. 막힌 밀수 길도 뚫어낼 묘안이 있는 마이웨이가 돋보이는 인물이다.",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "15",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": ""
+    },
+    {
+      "title": "천박사 퇴마 연구소",
+      "type": "영화",
+      "src": "./images/contents/top05.jpg",
+      "m_src": "https://www.youtube.com/embed/3kYYCgpMlTM?si=i0X1RjTRDupRh-sC",
+      "description": "귀신을 듣지도 보지도 못하지만 귀신 같은 통찰력으로 온갖 사건을 해결하는 가짜 퇴마사 ‘천박사’가 지금껏 경험해본 적 없는 강력한 빙의 사건을 의뢰받으며 시작되는 이야기",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "12",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": ""
+    },
+    {
+      "title": "바빌론",
+      "type": "영화",
+      "src": "./images/contents/top06.jpg",
+      "m_src": "https://www.youtube.com/embed/kYkNIkymny8?si=aD_tOkdgj2iAcDYp",
+      "description": "무성영화에서 유성영화로 넘어가던 1920년대 할리우드를 배경으로, 영화를 만드는 사람들의 욕망과 사랑에 대한 이야기를 그렸다.",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "19",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": ""
+    },
+    {
+      "title": "라라랜드",
+      "type": "영화",
+      "src": "./images/contents/top07.jpg",
+      "m_src": "https://www.youtube.com/embed/Dt5hFexM5BI?si=ae4z9Eh7hw5J9UTt",
+      "description": "꿈을 꾸는 사람들을 위한 별들의 도시 '라라랜드'. 재즈 피아니스트 '세바스찬'(라이언 고슬링)과 성공을 꿈꾸는 배우 지망생 '미아'(엠마 스톤). 인생에서 가장 빛나는 순간 만난 두 사람은 미완성인 서로의 무대를 만들어가기 시작한다.",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "12",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": ""
+    },
+    {
+      "title": "상겨니",
+      "type": "드라마",
+      "src": "./images/contents/top08.jpg",
+      "m_src": "",
+      "description": "",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "15",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": "tepten7"
+    },
+    {
+      "title": "아이돌러쉬 세븐",
+      "type": "애니메이션",
+      "src": "./images/contents/top09.jpg",
+      "m_src": "https://www.youtube.com/embed/siWx8bxC5eg?si=nVwaLujs8aPEkZZD",
+      "description": "각자 다른 매력을 지닌 최고의 그룹들이 한자리에 모여 모두가 염원해온 꿈의 합동 무대를 선보인다.",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "12",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": "tepten8"
+    },
+    {
+      "title": "블루 자이언트",
+      "type": "애니메이션",
+      "src": "./images/contents/top10.jpg",
+      "m_src": "https://www.youtube.com/embed/JXD2v-GeZuc?si=KJv3GugNdRmZqrER",
+      "description": "《블루 자이언트》는 일본의 청년 만화 잡지 《빅 코믹》에 2013년부터 2016년까지 연재된, 재즈 음악을 주제로 하는 이시즈카 신이치의 만화 작품이다. 대한민국에서는 대원씨아이에서 단행본을 한국어로 번역하여 정식 발매하였다.",
+      "Ep": "",
+      "duration": "",
+      "age_grade": "12",
+      "h_src": "",
+      "ContentIntroduction": "",
+      "alt": "tepten9"
+    }
+  ]
+}

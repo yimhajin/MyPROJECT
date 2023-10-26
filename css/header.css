@@ -1,0 +1,1276 @@
+/*############################################################
+* 헤더 css
+* @author TEAM-ONE BY 하진
+* 2023.10.11 ~
+############################################################*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@media (max-width: 399px) {
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+
+  header {
+    z-index: 999; /* 정미 수정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    /* padding: 0px 200px; 정미 수정 */
+    transition: 0.5s ease;
+  }
+
+  /* header .brand {
+    color: crimson;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  } */
+
+  /* 로고 */
+  header h1.brand2 {
+    width: 140px;
+    height: auto;
+  }
+  header img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  header .brand2,
+  header .navigation {
+    display: flex;
+  }
+  header .navigation {
+    position: relative;
+    right: 0;
+    flex-grow: 1;
+  }
+  header .navigation .navigation-items a {
+    position: relative;
+    color: white;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s ease;
+  }
+  .navi-item {
+    display: none;
+  }
+  header .navigation .navigation-items a:before {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 0;
+    height: 2px;
+    bottom: -4px; /* 정미 수정 */
+    left: 0;
+    transition: 0.3s ease;
+  }
+  header .navigation .navigation-items a:hover:before {
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    color: white;
+    margin-left: auto;
+  }
+
+  .menu-item {
+    padding: 0 5px;
+  }
+  /* section {
+    padding: 100px 200px; // 10.18 신규 소스에서 삭제 됨(하진 수정)
+  } */
+
+  /* 메인 영상 영역 */
+  .home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    background: #181811;
+  }
+
+  .home .content {
+    /*10-19 수정 by HJ */
+    position: absolute;
+    z-index: 888;
+    color: white;
+    width: 70%;
+    padding: 0 200px;
+    top: 150px;
+    display: none;
+  }
+  .home .content.active {
+    display: block;
+  }
+  .home .content h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+  }
+  .home .content p {
+    margin-bottom: 65px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  /* 상세보기 */
+  .home .content a {
+    position: relative; /* 10-23 하진 수정 포지션 추가 */
+    vertical-align: middle;
+    background: white;
+    padding: 13px 35px;
+    color: black;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    top: -9px; /* 10-23 하진 수정 탑 위치 조정 추가*/
+  }
+  i {
+    margin-right: 10px;
+    align-items: center;
+  }
+  .home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider-navigation {
+    z-index: 888;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+    bottom: -500px; /* 정미 수정 (10-20 하진 추가)*/
+  }
+  .slider-navigation .nav-btn {
+    width: 20px; /* 정미 수정 */
+    height: 20px; /* 정미 수정 */
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rbga(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+  }
+  .slider-navigation .nav-btn.active {
+    background: red; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 30px; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:hover {
+    transform: scale(1.5); /* 정미 수정 */
+  }
+  .video-slide {
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
+  .video-slide.active {
+    transition: 2s ease;
+    display: block;
+  }
+
+  /* 헤더 하단 슬라이드 영역 추가 10-18 by HJ*/
+  .K_title h5 {
+    /*10-19 수정 by HJ */
+    display: none;
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    letter-spacing: -1px;
+    width: 100%;
+    font-weight: 700px;
+    border-left: 5px solid red;
+    padding-left: 15px;
+    width: 300px;
+    left: 200px;
+    bottom: 180px; /* 정미 수정 */
+    display: none;
+  }
+  swiper-container.mySwipers {
+    /*10-19 수정 by HJ */
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+    bottom: 0px;
+    display: none;
+  }
+
+  swiper-container.mySwipers swiper-slide.another-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+  }
+
+  swiper-container.mySwipers swiper-slide a,
+  swiper-slide img.kcontents {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50px;
+  }
+
+  /* video container 추가 10-20 */
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .video-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+
+  .video-slide {
+    position: absolute;
+    width: 100%;
+  }
+  /* 반응형 폰사이즈 용 메인 css */
+
+  .p_main_index {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    border: 0px solid black;
+  }
+  .p_main_img {
+    width: 100%;
+  }
+  .p_main_font {
+    position: absolute;
+    bottom: 19%;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .katana_logo {
+    width: 150px;
+    height: 150px;
+  }
+  .p_main_button1 {
+    position: absolute;
+    border: none;
+    bottom: 85px;
+    left: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_button2 {
+    position: absolute;
+    border: none;
+    bottom: 85px;
+    right: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_index::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+
+  header {
+    z-index: 999; /* 정미 수정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    /* padding: 0px 200px; 정미 수정 */
+    transition: 0.5s ease;
+  }
+
+  /* header .brand {
+    color: crimson;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  } */
+
+  /* 로고 */
+  header h1.brand2 {
+    width: 140px;
+    height: auto;
+  }
+  header img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  header .brand2,
+  header .navigation {
+    display: flex;
+  }
+  header .navigation {
+    position: relative;
+    right: 0;
+    flex-grow: 1;
+  }
+  header .navigation .navigation-items a {
+    position: relative;
+    color: white;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+  }
+  .navi-item {
+    display: none;
+  }
+  header .navigation .navigation-items a:before {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 0;
+    height: 2px;
+    bottom: -4px; /* 정미 수정 */
+    left: 0;
+    transition: 0.3s ease;
+  }
+  header .navigation .navigation-items a:hover:before {
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    color: white;
+    margin-left: auto;
+  }
+
+  .menu-item {
+    padding: 0 10px;
+  }
+  /* section {
+    padding: 100px 200px; // 10.18 신규 소스에서 삭제 됨(하진 수정)
+  } */
+
+  /* 메인 영상 영역 */
+  .home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    background: #181811;
+  }
+
+  .home .content {
+    /*10-19 수정 by HJ */
+    position: absolute;
+    z-index: 888;
+    color: white;
+    width: 70%;
+    padding: 0 200px;
+    top: 150px;
+    display: none;
+  }
+  .home .content.active {
+    display: block;
+  }
+  .home .content h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+  }
+  .home .content p {
+    margin-bottom: 65px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  /* 상세보기 */
+  .home .content a {
+    position: relative; /* 10-23 하진 수정 포지션 추가 */
+    vertical-align: middle;
+    background: white;
+    padding: 13px 35px;
+    color: black;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    top: -9px; /* 10-23 하진 수정 탑 위치 조정 추가*/
+  }
+  i {
+    margin-right: 10px;
+    align-items: center;
+  }
+  .home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider-navigation {
+    z-index: 888;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+    bottom: -500px; /* 정미 수정 (10-20 하진 추가)*/
+  }
+  .slider-navigation .nav-btn {
+    width: 20px; /* 정미 수정 */
+    height: 20px; /* 정미 수정 */
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rbga(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+  }
+  .slider-navigation .nav-btn.active {
+    background: red; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 30px; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:hover {
+    transform: scale(1.5); /* 정미 수정 */
+  }
+  .video-slide {
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
+  .video-slide.active {
+    transition: 2s ease;
+    display: block;
+  }
+
+  /* 헤더 하단 슬라이드 영역 추가 10-18 by HJ*/
+  .K_title h5 {
+    /*10-19 수정 by HJ */
+    display: none;
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    letter-spacing: -1px;
+    width: 100%;
+    font-weight: 700px;
+    border-left: 5px solid red;
+    padding-left: 15px;
+    width: 300px;
+    left: 200px;
+    bottom: 180px; /* 정미 수정 */
+    display: none;
+  }
+  swiper-container.mySwipers {
+    /*10-19 수정 by HJ */
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+    bottom: -50px;
+    display: none;
+  }
+
+  swiper-container.mySwipers swiper-slide.another-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+  }
+
+  swiper-container.mySwipers swiper-slide a,
+  swiper-slide img.kcontents {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50px;
+  }
+
+  /* video container 추가 10-20 */
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .video-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+
+  .video-slide {
+    position: absolute;
+    width: 100%;
+  }
+  /* 반응형 폰사이즈 용 메인 css */
+
+  .p_main_index {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    border: 0px solid black;
+    display: block;
+  }
+  .p_main_img {
+    width: 100%;
+    margin-top: 0;
+  }
+  .p_main_font {
+    position: absolute;
+    bottom: 19%;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .katana_logo {
+    width: 150px;
+    height: 150px;
+  }
+  .p_main_button1 {
+    position: absolute;
+    border: none;
+    bottom: 85px;
+    left: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_button2 {
+    position: absolute;
+    border: none;
+    bottom: 85px;
+    right: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_index::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+
+  header {
+    z-index: 999; /* 정미 수정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    /* padding: 0px 200px; 정미 수정 */
+    transition: 0.5s ease;
+  }
+
+  /* header .brand {
+  color: crimson;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+} */
+
+  /* 로고 */
+  header h1.brand2 {
+    width: 140px;
+    height: auto;
+  }
+  header img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  header .brand2,
+  header .navigation {
+    display: flex;
+  }
+  header .navigation {
+    position: relative;
+    right: 0;
+    flex-grow: 1;
+  }
+  header .navigation .navigation-items a {
+    position: relative;
+    color: white;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: 0.3s ease;
+  }
+  header .navigation .navigation-items a:before {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 0;
+    height: 2px;
+    bottom: -4px; /* 정미 수정 */
+    left: 0;
+    transition: 0.3s ease;
+  }
+  header .navigation .navigation-items a:hover:before {
+    width: 100%;
+  }
+  .navi-item {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    color: white;
+    margin-left: auto;
+  }
+
+  .menu-item {
+    padding: 0 10px;
+  }
+  /* section {
+  padding: 100px 200px; // 10.18 신규 소스에서 삭제 됨(하진 수정)
+} */
+
+  /* 메인 영상 영역 */
+  .home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    background: #181811;
+  }
+
+  .home .content {
+    /*10-19 수정 by HJ */
+    position: absolute;
+    z-index: 888;
+    color: white;
+    width: 70%;
+    padding: 0 200px;
+    top: 150px;
+    display: none;
+  }
+  .home .content.active {
+    display: block;
+  }
+  .home .content h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+  }
+  .home .content p {
+    margin-bottom: 65px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  /* 상세보기 */
+  .home .content a {
+    position: relative; /* 10-23 하진 수정 포지션 추가 */
+    vertical-align: middle;
+    background: white;
+    padding: 13px 35px;
+    color: black;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    top: -9px; /* 10-23 하진 수정 탑 위치 조정 추가*/
+  }
+  i {
+    margin-right: 10px;
+    align-items: center;
+  }
+  .home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider-navigation {
+    z-index: 888;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+    bottom: -500px; /* 정미 수정 (10-20 하진 추가)*/
+  }
+  .slider-navigation .nav-btn {
+    width: 20px; /* 정미 수정 */
+    height: 20px; /* 정미 수정 */
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rbga(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+  }
+  .slider-navigation .nav-btn.active {
+    background: red; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 30px; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:hover {
+    transform: scale(1.5); /* 정미 수정 */
+  }
+  .video-slide {
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
+  .video-slide.active {
+    transition: 2s ease;
+    display: block;
+  }
+
+  /* 헤더 하단 슬라이드 영역 추가 10-18 by HJ*/
+  .K_title h5 {
+    /*10-19 수정 by HJ */
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    letter-spacing: -1px;
+    width: 100%;
+    font-weight: 700px;
+    border-left: 5px solid red;
+    padding-left: 15px;
+    width: 300px;
+    left: 200px;
+    bottom: 180px; /* 정미 수정 */
+    display: none;
+  }
+  swiper-container.mySwipers {
+    /*10-19 수정 by HJ */
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+    bottom: 0px;
+    display: none;
+  }
+
+  swiper-container.mySwipers swiper-slide.another-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+  }
+
+  swiper-container.mySwipers swiper-slide a,
+  swiper-slide img.kcontents {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50px;
+  }
+
+  /* video container 추가 10-20 */
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .video-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+
+  .video-slide {
+    position: absolute;
+    width: 100%;
+  }
+  /* 반응형 폰사이즈 용 메인 css */
+
+  .p_main_index {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    border: 0px solid black;
+  }
+  .p_main_img {
+    width: 100%;
+  }
+  .p_main_font {
+    position: absolute;
+    bottom: 19%;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .katana_logo {
+    width: 250px;
+    height: 250px;
+  }
+  .p_main_button1 {
+    position: absolute;
+    border: none;
+    bottom: 85px;
+    left: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_button2 {
+    position: absolute;
+    border: none;
+    bottom: 85px;
+    right: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_index::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+}
+@media (min-width: 1024px) {
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+
+  header {
+    z-index: 999; /* 정미 수정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 130px; /* 정미 수정 */
+    transition: 0.5s ease;
+  }
+
+  /* header .brand {
+  color: crimson;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+} */
+
+  /* 로고 */
+  header h1.brand2 {
+    width: 140px;
+    height: auto;
+  }
+  header img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  header .brand2,
+  header .navigation {
+    display: flex;
+  }
+  header .navigation {
+    position: relative;
+    right: 0;
+    flex-grow: 1;
+  }
+  header .navigation .navigation-items a {
+    position: relative;
+    color: white;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s ease;
+  }
+  header .navigation .navigation-items a:before {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 0;
+    height: 2px;
+    bottom: -4px; /* 정미 수정 */
+    left: 0;
+    transition: 0.3s ease;
+  }
+  header .navigation .navigation-items a:hover:before {
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    color: white;
+    margin-left: auto;
+  }
+
+  .menu-item {
+    padding: 0 10px;
+  }
+  /* section {
+  padding: 100px 200px; // 10.18 신규 소스에서 삭제 됨(하진 수정)
+} */
+
+  /* 메인 영상 영역 */
+  .home {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #181811;
+  }
+
+  .home .content {
+    /*10-19 수정 by HJ */
+    position: absolute;
+    z-index: 888;
+    color: white;
+    width: 70%;
+    padding: 0 130px;
+    top: 150px;
+    display: none;
+  }
+  .home .content.active {
+    display: block;
+  }
+  .home .content h1 {
+    font-size: 3.3vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 60px;
+  }
+  .home .content p {
+    margin-bottom: 65px;
+    font-size: 1.1vw;
+    font-weight: 700;
+  }
+  /* 상세보기 */
+  .home .content a {
+    position: relative; /* 10-23 하진 수정 포지션 추가 */
+    vertical-align: middle;
+    background: white;
+    padding: 13px 35px;
+    color: black;
+    font-size: 1.2em; /* 정미 수정 */
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    top: -9px; /* 10-23 하진 수정 탑 위치 조정 추가*/
+  }
+  i {
+    margin-right: 10px;
+    align-items: center;
+  }
+  .home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider-navigation {
+    z-index: 888;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+    bottom: -500px; /* 정미 수정 (10-20 하진 추가)*/
+  }
+  .slider-navigation .nav-btn {
+    width: 20px; /* 정미 수정 */
+    height: 20px; /* 정미 수정 */
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rbga(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+  }
+  .slider-navigation .nav-btn.active {
+    background: red; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 30px; /* 정미 수정 */
+  }
+  .slider-navigation .nav-btn:hover {
+    transform: scale(1.5); /* 정미 수정 */
+  }
+  .video-slide {
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
+  .video-slide.active {
+    transition: 2s ease;
+    display: block;
+  }
+
+  /* 헤더 하단 슬라이드 영역 추가 10-18 by HJ*/
+  .K_title {
+    /*10-19 수정 by HJ */
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    letter-spacing: -1px;
+    font-weight: 700px;
+    border-left: 5px solid red;
+    padding-left: 15px;
+    width: 300px;
+    left: 200px;
+    bottom: 180px; /* 정미 수정 */
+  }
+  swiper-container.mySwipers {
+    /*10-19 수정 by HJ */
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+    bottom: 220px;
+  }
+
+  swiper-container.mySwipers swiper-slide.another-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+  }
+
+  swiper-container.mySwipers swiper-slide a,
+  swiper-slide img.kcontents {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50px;
+  }
+
+  /* video container 추가 10-20 */
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .video-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+
+  .video-slide {
+    position: absolute;
+    width: 100%;
+  }
+  /* 반응형 폰사이즈 용 메인 css */
+
+  .p_main_index {
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    border: 0px solid black;
+    display: none;
+  }
+  .p_main_img {
+    width: 100%;
+  }
+  .p_main_font {
+    position: absolute;
+    bottom: 19%;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .p_main_button1 {
+    position: absolute;
+    border: none;
+    bottom: 50px;
+    left: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_button2 {
+    position: absolute;
+    border: none;
+    bottom: 50px;
+    right: 15%;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  .p_main_index::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(
+      to top,
+      rgba(24, 24, 17, 1) 0%,
+      rgba(24, 24, 17, 0) 100%
+    );
+  }
+}

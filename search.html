@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CINEFLEX</title>
+    <script src="./script/jquery-3.7.0.min.js"></script>
+    <script src="./script/scriptForsearch.js"></script>
+    <script src="./js/slide.js"></script>
+    <script src="./script/modal.js"></script>
+    <script src="./script/ggimpublic.js"></script>
+    <!-- 로그인 스크립트 -->
+    <script src="./js/login.js"></script>
+    <!-- 파피콘 아이콘 -->
+    <link rel="manifest" href="./json/manifest.json" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/mobilenav.css" />
+
+    <link rel="stylesheet" type="text/css" href="./css/searchcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Top 10 영화 관련 css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- 추천영화 관련 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <!--// 전체 콘텐츠 시작 -->
+    <div id="wrap">
+      <!--// (정미작업) 로그인 시작 -->
+      <div id="loginWrap">
+        <div id="bgs"><!-- 콘텐츠를 가려주는 반투명용 div --></div>
+        <!--// 로그인 모달창 시작 -->
+        <div id="modalWrapping">
+          <button class="loginClose" onClick="login_close()">X</button>
+          <div id="memberLogin">
+            <!--// 로그인폼 영역 시작 -->
+            <form onsubmit="login(); return false">
+              <fieldset>
+                <img src="./images/logo.png" alt="logo" />
+                <h2>Login</h2>
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input type="text" required placeholder="" id="userId" />
+                  <label for="userId">아이디를 입력하세요</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"
+                    ><ion-icon name="lock-closed"></ion-icon
+                  ></span>
+                  <input type="password" required placeholder="" id="userPw" />
+                  <label for="userPw">비밀번호를 입력하세요</label>
+                </div>
+                <button type="submit">로그인</button>
+              </fieldset>
+            </form>
+            <!-- 포그인폼 영역 종료 //-->
+          </div>
+          <!-- 아이콘 오픈소스 링크 -->
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+          ></script>
+          <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+          ></script>
+        </div>
+        <!-- 로그인 모달창 종료 //-->
+      </div>
+      <!-- (정미작업) 로그인 종료 //-->
+
+      <!--// (하진작업) 헤더 영역 시작 -->
+      <header style="position: fixed">
+        <!--// 로고 시작 -->
+        <h1 class="brand2"><img src="./images/logo.png" /></h1>
+        <!--// 로고 종료 -->
+        <div class="menu-btn"></div>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="./index.html" class="navi-item">홈</a>
+            <a href="./search.html?movieClick=movie" class="navi-item">영화</a>
+            <a href="./search.html?movieClick=drama" class="navi-item"
+              >드라마</a
+            >
+            <a href="./search.html?movieClick=entertainment" class="navi-item"
+              >예능</a
+            >
+            <a href="./search.html?movieClick=ani" class="navi-item"
+              >애니메이션</a
+            >
+            <a href="./ggim.html" class="my_ggimList">나의 찜 목록</a>
+          </div>
+          <!--// 인포 메뉴 시작 -->
+          <div class="menu">
+            <div class="menu-item">
+              <a href="./search.html"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+            </div>
+            <div class="menu-item">
+              <a href="#" onClick="show()" title="로그인" id="log">로그인</a>
+            </div>
+          </div>
+          <!--// 인포 메뉴 종료 -->
+        </div>
+      </header>
+
+      <!-- (하진작업) 헤더 영역 종료 //-->
+      <!-- --------------------------------------------검색화면-------------------------------------------------------------------- -->
+      <div id="pickListWrap">
+        <div id="inputBox">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="제목을 검색해보세요"
+          /><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div id="pickLists">
+          <div class="pickList" title="movie">
+            <a href="./search.html?movieClick=movie">영화</a>
+          </div>
+          <div class="pickList" title="drama">
+            <a href="./search.html?movieClick=drama">드라마</a>
+          </div>
+          <div class="pickList" title="ani">
+            <a href="./search.html?movieClick=ani">애니메이션</a>
+          </div>
+          <div class="pickList" title="entertainment">
+            <a href="./search.html?movieClick=entertainment">예능</a>
+          </div>
+          <div class="clear_both"></div>
+        </div>
+        <!-- 추천리스트 -->
+        <hr />
+        <div id="recomendList">
+          <span class="sub_name">추천 영상</span>
+          <div class="recomendeds"></div>
+          <div class="clear_both"></div>
+        </div>
+        <!-- 추천리스트끝 -->
+
+        <!-- 검색리스트 -->
+        <div id="searchSection" class="sections">
+          <div id="searchList" class="listSection"></div>
+          <div class="clear_both"></div>
+        </div>
+        <!-- 검색리스트 끝 -->
+
+        <!-- 영화, 애니,드라마 색션  시작-->
+        <div id="movieSection" class="sections">
+          <span class="sub_name">영화</span>
+          <div id="movieList" class="listSection"></div>
+          <div class="clear_both"></div>
+        </div>
+
+        <div id="dramaSection" class="sections">
+          <span class="sub_name">드라마</span>
+          <div id="dramaList" class="listSection"></div>
+          <div class="clear_both"></div>
+        </div>
+        <div id="aniSection" class="sections">
+          <div id="aniList" class="listSection"></div>
+          <div class="clear_both"></div>
+        </div>
+
+        <div id="entertainmentSection" class="sections">
+          <div id="entertainmentList" class="listSection"></div>
+          <div class="clear_both"></div>
+        </div>
+        <!-- 각 색션 끝 -->
+      </div>
+      <!-- ---------------------------------------------------검색 리스트  끝--------------------------------------------------------- -->
+
+      <!-- ------------------------------------------------------------모달시작  10-19 추가--------------------------------------------->
+
+      <div id="modal_bg">
+        <div id="modalWrap">
+          <!--모달 렙 -->
+          <!-- 모달 x버튼 -->
+          <button class="modal_close">X</button>
+
+          <div id="modaled_info">
+            <!-- 해당하는 모달창    -->
+          </div>
+
+          <div id="info_list_wrap">
+            <!-- 리스트  -->
+            <ul id="info_list">
+              <li><button value="1" id="m_bt01">회차</button></li>
+              <li><button value="2" id="m_bt02">코맨트</button></li>
+              <li><button value="3" id="m_bt03">관련 콘텐츠</button></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+
+          <!-------------------------------- 클릭하면 보여지는 색션들 ----------------------------->
+
+          <div id="movieRoundList_wrap" class="modal_section">
+            <!-- 동적으로 보여질 회차  classs는 movieRondList-->
+            <div class="movieRondList"></div>
+          </div>
+
+          <div id="ipb" class="modal_section">
+            <!-- 코맨트창 -->
+            <div id="commentSection"></div>
+            <div id="modalInputBox">
+              <input
+                type="text"
+                id="commentInput"
+                placeholder="감상평을 남겨주세요."
+                class="input"
+              />
+              <button class="ipBtn" onclick="addComment()">입력</button>
+            </div>
+          </div>
+
+          <div id="rel_contents" class="modal_section">
+            <!-- 관련 콘텐츠추가 -->
+          </div>
+
+          <div class="clear"></div>
+          <!-- <div id="plus_wrap"><button id="plus_button">v</button></div> -->
+        </div>
+        <!----------------------------- 클릭하면 보여지는 색션들 ----------------------------->
+      </div>
+
+      <!--------------------------------------------------------------------- 모달끝 -------------------------------------------->
+
+      <!--// (정미작업) 푸터 영역 시작 -->
+      <footer class="search">
+        <div>
+          <ul>
+            <li><a href="./companyinfo.html">회사소개</a></li>
+            <li><a href="./map.html">오시는 길</a></li>
+            <li><a href="./terms.html">이용약관</a></li>
+            <li><a href="./lcinfo.html">위치기반서비스 이용약관</a></li>
+            <li><a href="./privacy.html">개인정보처리방침</a></li>
+            <li><a href="./sitemap.html">사이트맵</a></li>
+          </ul>
+        </div>
+        <h1><img src="./images/logo_g.png" alt="logo" class="logo_g" /></h1>
+        <p class="copyright">
+          COPYRIGHT &copy; 2023 TEAM-ONE PROJECT BY SW. HJ. JW. JM. ALL RIGHTS
+          RESERVED.
+        </p>
+      </footer>
+      <!-- (정미작업) 푸터 영역 종료 //-->
+    </div>
+    <!-- 모바일 네비 -->
+    <div id="mobile_nav_wrap">
+      <ul>
+        <li><a href="./search.html?movieClick=movie">영화</a></li>
+        <li><a href="./search.html?movieClick=drama">드라마</a></li>
+        <li>
+          <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li><a href="./search.html?movieClick=ani">애니메이션</a></li>
+        <li><a href="./search.html?movieClick=entertainment">예능</a></li>
+      </ul>
+      <div class="m_clear"></div>
+    </div>
+    <!-- 모바일 네비 -->
+
+    <!-- // 전체 콘텐츠 종료 -->
+  </body>
+</html>

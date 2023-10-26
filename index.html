@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CINEFLEX</title>
+    <!-- jQuery 오픈소스 -->
+    <script src="./script/jquery-3.7.0.min.js"></script>
+    <!-- 검색 스크립트 -->
+    <script src="./script/scriptForsearch.js"></script>
+    <!-- 모달창 스크립트 -->
+    <script src="./script/modal.js"></script>
+    <!-- 헤더 nav, video, slide 스크립트 -->
+    <script src="./js/slide.js"></script>
+    <!-- 찜목록 스크립트 -->
+    <script src="./script/ggimpublic.js"></script>
+    <!-- 로그인 스크립트 -->
+    <script src="./js/login.js"></script>
+    <!-- 파피콘 아이콘 -->
+    <link rel="manifest" href="./json/manifest.json">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/searchcss.css" />
+    <link rel="stylesheet" href="./css/mobilenav.css" />
+
+    <!-- Top 10 영화 관련 swiper 라이브러리 오픈소스 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- 추천영화 관련 라이브러리 오픈소스 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!-- 폰트어썸 오픈소스 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" />
+    <script defer src="./js/fetch.js"></script>
+    
+  </head>
+
+  <body>
+    <!--// 전체 콘텐츠 시작 -->
+    <div id="wrap">
+      <!--// (정미작업) 로그인 시작 -->
+      <div id="loginWrap">
+        <div id="bgs"><!-- 콘텐츠를 가려주는 반투명용 div --></div>
+        <!--// 로그인 모달창 시작 -->
+        <div id="modalWrapping">
+          <button class="loginClose" onClick="login_close()">X</button>
+          <div id="memberLogin">
+            <!--// 로그인폼 영역 시작 -->
+            <form onsubmit="login(); return false">
+              <fieldset>
+                <img src="./images/logo.png" alt="logo" />
+                <h2>Login</h2>
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input type="text" required placeholder="" id="userId" />
+                  <label for="userId">아이디를 입력하세요</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                  <input type="password" required placeholder="" id="userPw" />
+                  <label for="userPw">비밀번호를 입력하세요</label>
+                </div>
+                <button type="submit">로그인</button>
+              </fieldset>
+            </form>
+            <!-- 포그인폼 영역 종료 //-->
+          </div>
+          <!-- 아이콘 오픈소스 링크 -->
+          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </div>
+        <!-- 로그인 모달창 종료 //-->
+      </div>
+      <!-- (정미작업) 로그인 종료 //-->
+
+      <!--// (하진작업) 헤더 영역 시작 -->
+      <header style="position: fixed">
+        <!--// 로고 시작 -->
+        <h1 class="brand2"><img src="./images/logo.png"/></h1>
+        <!--// 로고 종료 -->
+        <div class="menu-btn"></div>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="./index.html" class="navi-item">홈</a>
+            <a href="./search.html?movieClick=movie" class="navi-item">영화</a>
+            <a href="./search.html?movieClick=drama" class="navi-item">드라마</a>
+            <a href="./search.html?movieClick=entertainment" class="navi-item">예능</a>
+            <a href="./search.html?movieClick=ani" class="navi-item">애니메이션</a>
+            <a href="./ggim.html" class="my_ggimList">나의 찜 목록</a>
+          </div>
+          <!--// 인포 메뉴 시작 -->
+          <div class="menu">
+            <div class="menu-item">
+              <a href="./search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <div class="menu-item">
+              <a href="#" onClick="show()" title="로그인" id="log">로그인</a>
+            </div>
+          </div>
+          <!--// 인포 메뉴 종료 -->
+        </div>
+      </header>
+      <!-- (하진작업) 헤더 영역 종료 //-->
+
+      <!--// (하진작업) 메인 영역 시작 -->
+      <!-- 태블릿 이하 메인 영역 시작 -->
+      <div class="p_main_index">
+        <img
+          src="https://image.aladin.co.kr/product/28612/10/letslook/K292835851_t13.jpg"
+          alt="귀멸의 칼날"
+          class="p_main_img"
+        />
+        <h1 class="p_main_font"><img src="./images/katana_logo.png" class="katana_logo"></h1>
+        <a href="#" onClick="return false" class="p_main_button1 ggim_button" value="귀멸의 칼날"
+          ><i class="fa-solid fa-plus"></i>찜 하기</a
+        >
+        <a href="#" onClick="return false";  class="p_main_button2 modal_button" value="귀멸의 칼날"
+          ><i class="fa-solid fa-circle-info"></i>상세정보</a
+        >
+        <!-- 태블릿 이하 메인 영역 끝 -->
+      </div>
+      <section class="home">
+        <div class="video-container">
+          <video class="video-slide active" src="./video/video1.mp4" autoplay muted loop></video>
+          <video class="video-slide" src="./video/video2.mp4" autoplay muted loop></video>
+          <video class="video-slide" src="./video/video3.mp4" autoplay muted loop></video>
+          <video class="video-slide" src="./video/video4.mp4" autoplay muted loop></video>
+          <video class="video-slide" src="./video/video5.mp4" autoplay muted loop></video>
+          <div class="content active modal_button" value="귀멸의 칼날">
+            <h1>귀멸의 칼날</h1>
+            <p>「도공의 마을」로 향한 탄지로. 귀살대 최강의 검사 《주》 계급인 하주 토키토 무이치로와 연주 칸로지 미츠리 와의 재회- 그리고, 뒤흔들리는 혈귀의 그림자!!</p>
+            <a href="#" onClick="return false;"><i class="fa-solid fa-circle-info"></i>상세보기</a>
+          </div>
+          <div class="content modal_button" value="데블스플랜">
+            <h1>데블스플랜</h1>
+            <p>변호사, 의사, 과학 유튜버, 프로 게이머, 배우 등 다양한 직업군의 12인의 플레이어가 7일간 합숙하며 최고의 브레인을 가리는 두뇌 서바이벌 게임 예능</p>
+            <a href="#" onClick="return false;"><i class="fa-solid fa-circle-info"></i>상세보기</a>
+          </div>
+          <div class="content modal_button" value="어벤져스 엔드게임">
+            <h1>어벤져스 엔드게임</h1>
+            <p>인피니티 워 이후 절반만 살아남은 지구 마지막 희망이 된 어벤져스 먼저 떠난 그들을 위해 모든 것을 걸었다! 위대한 어벤져스 운명을 바꿀 최후의 전쟁이 펼쳐진다!</p>
+            <a href="#" onClick="return false;"><i class="fa-solid fa-circle-info"></i>상세보기</a>
+          </div>
+          <div class="content modal_button" value="너의 시간 속으로">
+            <h1>너의 시간 속으로</h1>
+            <p>1년 전 세상을 떠난 남자친구를 그리워하던 준희가 운명처럼 1998년으로 타임슬립해 남자친구와 똑같이 생긴 시헌과 친구 인규를 만나고 겪게 되는 미스터리 로맨스</p>
+            <a href="#" onClick="return false;"><i class="fa-solid fa-circle-info"></i>상세보기</a>
+          </div>
+          <div class="content modal_button" value="너의 이름은">
+            <h1>너의 이름은</h1>
+            <p>아직 만난 적 없는 너를, 찾고 있어 천년 만에 다가오는 혜성 기적이 시작된다 도쿄에 사는 소년 ‘타키’와 시골에 사는 소녀 ‘미츠하’는 서로의 몸이 뒤바뀌는 신기한 꿈을 꾼다</p>
+            <a href="#" onClick="return false;"><i class="fa-solid fa-circle-info"></i>상세보기</a>
+          </div>
+          <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+          </div>
+        </div>
+      </section>
+      <!-- 헤더 하단 콘텐츠 소개 슬라이드 영역 추가 10-18 by HJ -->
+      <div class="K_title"><h5>주목할 만한 한국 컨텐츠</h5></div>
+      <swiper-container class="mySwipers" slides-per-view="4" centered-slides="true" space-between="50" pagination="true" pagination-type="fraction" navigation="true">
+        <swiper-slide class="another-slide modal_button" value="솔로지옥"
+          ><a href="#" onClick="return false;"><img src="./images/slide1.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="오징어 게임"
+          ><a href="#" onClick="return false;"><img src="./images/slide2.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="환혼"
+          ><a href="#" onClick="return false;"><img src="./images/slide3.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="강철부대"
+          ><a href="#" onClick="return false;"><img src="./images/slide4.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="도깨비"
+          ><a href="#" onClick="return false;"><img src="./images/slide5.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="별에서 온 그대"
+          ><a href="#" onClick="return false;"><img src="./images/slide6.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="빠담빠담"
+          ><a href="#" onClick="return false;"><img src="./images/slide7.png" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="좀비버스"
+          ><a href="#" onClick="return false;"><img src="./images/slide8.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="놀면 뭐하니?"
+          ><a href="#" onClick="return false;"><img src="./images/slide9.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+        <swiper-slide class="another-slide modal_button" value="킹더랜드"
+          ><a href="#" onClick="return false;"><img src="./images/slide10.jpg" alt="koreanContents" class="kcontents modal_button" /></a
+        ></swiper-slide>
+      </swiper-container>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+      <!-- (하진작업) 메인 영역 종료 //-->
+
+      <!--// (정미작업) 롤링 뉴스 영역 시작 -->
+      <div id="article">
+        <p class="para" id="para1">
+          <span>안녕하십니까, 시네플렉스입니다. 원활하고 안정된 서비스 제공을 위하여 모든 서비스가 중단될 예정이오니 이용에 불편 없으시기 바랍니다.</a>
+        </p>
+      </div>
+      <script src="./js/article.js"></script>
+      <!--// (정미작업) 롤링 뉴스 영역 종료 -->
+      
+      <div id="contents">
+        <!--// (정미작업) Top 10 영화 영역 시작 -->
+        <div id="top_title">
+          <p>TOP<span>10</span></p>
+          <p>MOVIES</p>
+          <p>TODAY</p>
+        </div>
+        <swiper-container class="mySwiper" slides-per-view="3" autoplay-delay="3000">
+          <span>1</span><swiper-slide class="topten1"></swiper-slide>  
+          <span>2</span><swiper-slide class="topten2"></swiper-slide>  
+          <span>3</span><swiper-slide class="topten3"></swiper-slide>  
+          <span>4</span><swiper-slide class="topten4"></swiper-slide>  
+          <span>5</span><swiper-slide class="topten5"></swiper-slide>  
+          <span>6</span><swiper-slide class="topten6"></swiper-slide>  
+          <span>7</span><swiper-slide class="topten7"></swiper-slide>  
+          <span>8</span><swiper-slide class="topten8"></swiper-slide>  
+          <span>9</span><swiper-slide class="topten9"></swiper-slide>  
+          <span>10</span><swiper-slide class="topten10"></swiper-slide>
+          <swiper-slide></swiper-slide> 
+        </swiper-container>
+        <!--//Top 10 영화 스크립트 링크 시작 -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+        <!--Top 10 영화 스크립트 링크 종료 //-->
+      </div>
+      <div id="clear"></div>
+      <!-- (정미작업) Top 10 영화 영역 종료 //-->
+
+
+      <!-- ------------------------------------------------------------모달시작  10-19 추가--------------------------------------------->
+
+      <div id="modal_bg">
+        <div id="modalWrap">
+          <!--모달 렙 -->
+          <!-- 모달 x버튼 -->
+          <button class="modal_close">X</button>
+
+          <div id="modaled_info">
+            <!-- 해당하는 모달창    -->
+          </div>
+
+          <div id="info_list_wrap">
+            <!-- 리스트  -->
+            <ul id="info_list">
+              <li><button value="1">회차</button></li>
+              <li><button value="2">코맨트</button></li>
+              <li><button value="3">관련 콘텐츠</button></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+
+          <!-------------------------------- 클릭하면 보여지는 색션들 ----------------------------->
+
+          <div id="movieRoundList_wrap" class="modal_section">
+            <!-- 동적으로 보여질 회차  classs는 movieRondList-->
+            <div class="movieRondList"></div>
+          </div>
+
+          <div id="ipb" class="modal_section">
+            <!-- 코맨트창 -->
+            <div id="commentSection"></div>
+            <div id="modalInputBox">
+              <input type="text" id="commentInput" placeholder="감상평을 남겨주세요." class="input" />
+              <button class="ipBtn" onclick="addComment()">입력</button>
+            </div>
+          </div>
+
+          <div id="rel_contents" class="modal_section">
+            <!-- 관련 콘텐츠추가 -->
+          </div>
+
+          <div class="clear"></div>
+          <!-- <div id="plus_wrap"><button id="plus_button">v</button></div> -->
+        </div>
+        <!----------------------------- 클릭하면 보여지는 색션들 ----------------------------->
+      </div>
+
+      <!--------------------------------------------------------------------- 모달끝 -------------------------------------------->
+
+
+
+      <!--// (정미작업) 추천영화 영역 시작 -->
+      <div id="contents2">
+        <div id="recomm">
+          <div id="recommWrap">
+            <h1>RECOMMENDED <span>MOVIES</span></h1>
+            <div class="carousel">
+              <a class="carousel-item modal_button" href="#" onClick="return false;" value="크리에이터" ><img src="./images/contents/top15.jpg" alt="recommended01" /></a>
+              <a class="carousel-item modal_button" href="#" onClick="return false;" value="5등의 신부"><img src="./images/contents/top12.jpg" alt="recommended02" /></a>
+              <a class="carousel-item modal_button" href="#" onClick="return false;" value="나의 행복한 결혼식"><img src="./images/contents/top13.jpg" alt="recommended03" /></a>
+              <a class="carousel-item modal_button" href="#" onClick="return false;" value="슬램 덩크"><img src="./images/contents/top14.jpg" alt="recommended04" /></a>
+              <a class="carousel-item modal_button" href="#" onClick="return false;" value="오펜하이머"><img src="./images/contents/top30.jpg" alt="recommended05" /></a>
+            </div>
+          </div>
+        </div>
+        <!--// 추천영화 스크립트 링크 시작 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="./js/carousel.js"></script>
+        <!-- (정미작업) 추천영화 영역 종료 //-->
+      </div>
+
+      <!--// (정미작업) 푸터 영역 시작 -->
+      <footer>
+        <div>
+          <ul>
+            <li><a href="./companyinfo.html">회사소개</a></li>
+            <li><a href="./map.html">오시는 길</a></li>
+            <li><a href="./terms.html">이용약관</a></li>
+            <li><a href="./lcinfo.html">위치기반서비스 이용약관</a></li>
+            <li><a href="./privacy.html">개인정보처리방침</a></li>
+            <li><a href="./sitemap.html">사이트맵</a></li>
+          </ul>
+        </div>
+        <h1><img src="./images/logo_g.png" alt="logo" class="logo_g" /></h1>
+        <p class="copyright">COPYRIGHT &copy; 2023 TEAM-ONE PROJECT BY SW. HJ. JW. JM. ALL RIGHTS RESERVED.</p>
+      </footer>
+      <!-- (정미작업) 푸터 영역 종료 //-->
+    </div>
+    <!-- // 전체 콘텐츠 종료 -->
+    <!-- 모바일 네비 -->
+    <div id="mobile_nav_wrap">
+      <ul>
+        <li><a href="./search.html?movieClick=movie">영화</a></li>
+        <li><a href="./search.html?movieClick=drama">드라마</a></li>
+        <li>
+          <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li><a href="./search.html?movieClick=ani">애니메이션</a></li>
+        <li><a href="./search.html?movieClick=entertainment">예능</a></li>
+      </ul>
+      <div class="m_clear"></div>
+    </div>
+    <!-- 모바일 네비 -->
+
+  </body>
+</html>

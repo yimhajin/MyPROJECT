@@ -1,0 +1,730 @@
+/*############################################################
+* 서포트 css
+* @author TEAM-ONE BY 정미
+* 2023.10.11 ~
+############################################################*/
+@media (max-width: 399px) {
+  /* 공통 */
+  .center {
+    text-align: center;
+  }
+  .f_1_5em {
+    font-size: 1em;
+  }
+
+  /* Support 영역 */
+  .support_bg {
+    background: url("../images/supportbg.png") no-repeat;
+  }
+  div#wrap div#support {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  /* 로케이션 타이틀 */
+  div#wrap div#support p {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #fff;
+    background-color: red;
+  }
+  div#wrap div#support > p > a,
+  a:hover,
+  a:visited {
+    font-size: 12px;
+    color: #ddd;
+  }
+
+  /* 메뉴 css */
+  div#wrap div#support ol li {
+    display: none;
+  }
+  div#wrap div#support ol li:first-child {
+    padding-left: 3px;
+  }
+  div#wrap div#support ol li:last-child {
+    display: none;
+  }
+  div#wrap div#support ol li a,
+  a:visited,
+  a:active {
+    color: bisque;
+    font-weight: none;
+  }
+  div#wrap div#support ol li a:hover {
+    text-decoration: underline;
+  }
+  /* 회사소개 */
+  div#wrap div#companyinfo div {
+    width: 100%;
+    min-height: 200px;
+    padding: 5%;
+    line-height: 180%;
+    color: #fff;
+    font-size: 10px;
+    background-color: #000;
+    opacity: 0.9;
+  }
+
+  /* 내부 큰 타이틀 */
+  div#wrap div#companyinfo div h3 {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    color: red;
+    border-bottom: 2px solid red;
+    width: 100%;
+  }
+  div#wrap div#companyinfo div p {
+    padding: 5px;
+  }
+  /* 내부 작은 타이틀 */
+  div#wrap div#companyinfo div h5 {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  div#wrap div#companyinfo img {
+    display: block;
+    padding: 5px;
+    width: 100%;
+  }
+
+  div#wrap div#companyinfo div p span {
+    color: red;
+  }
+  div#wrap div#companyinfo div p.special_tit {
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+  div#wrap div#companyinfo div p span.b_line {
+    color: #fff;
+    border-bottom: 1px solid red;
+  }
+
+  div#wrap div#companyinfo,
+  div#privacy,
+  div#lcinfo,
+  div#terms,
+  div#sitemap {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  /* 각 페이지 타이틀 */
+  div#companyinfo h2,
+  div#maps h2,
+  div#privacy h2,
+  div#lcinfo h2,
+  div#terms h2,
+  div#sitemap h2 {
+    font-size: 1.5em;
+  }
+
+  /* 이용약관, 위치기반서비스 이용약관, 개인정보처리방침 내부 div css */
+  div#wrap div#privacy div,
+  div#lcinfo div,
+  div#terms div,
+  div#sitemap div {
+    overflow: auto;
+    width: 100%;
+    height: 250px;
+    padding: 15px;
+    background-color: #000;
+    line-height: 200%;
+    color: #fff;
+    font-size: 10px;
+    opacity: 0.9;
+  }
+
+  /* kakao API map */
+  div#maps {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  div#maps div#map {
+    width: 100%;
+    height: 300px;
+  }
+
+  div#maps div#map a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  img.markk {
+    width: 120px;
+    margin: 10px;
+  }
+  span.mapBranch {
+    display: block;
+    color: #181818;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  /* 공통 */
+  .center {
+    text-align: center;
+  }
+  .f_1_5em {
+    font-size: 1em;
+  }
+
+  /* Support 영역 */
+  .support_bg {
+    background: url("../images/supportbg.png") no-repeat;
+  }
+  div#wrap div#support {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  /* 로케이션 타이틀 */
+  div#wrap div#support p {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background-color: red;
+  }
+  div#wrap div#support > p > a,
+  a:hover,
+  a:visited {
+    color: #ddd;
+  }
+
+  /* 메뉴 css */
+  div#wrap div#support ol li {
+    display: none;
+    float: left;
+    margin: 0 auto;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  div#wrap div#support ol li:first-child {
+    padding-left: 3px;
+  }
+  div#wrap div#support ol li:last-child {
+    display: none;
+  }
+  div#wrap div#support ol li a,
+  a:visited,
+  a:active {
+    color: bisque;
+    font-weight: none;
+  }
+  div#wrap div#support ol li a:hover {
+    text-decoration: underline;
+  }
+  /* 회사소개 */
+  div#wrap div#companyinfo div {
+    width: 100%;
+    padding: 2%;
+    line-height: 180%;
+    color: #fff;
+    font-size: 12px;
+    background-color: #000;
+    opacity: 0.8;
+  }
+
+  /* 내부 큰 타이틀 */
+  div#wrap div#companyinfo div h3 {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: red;
+    border-bottom: 2px solid red;
+    display: block;
+    width: 100%;
+  }
+  div#wrap div#companyinfo div p {
+    padding: 10px;
+  }
+  /* 내부 작은 타이틀 */
+  div#wrap div#companyinfo div h5 {
+    color: red;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  div#wrap div#companyinfo img {
+    display: block;
+    padding: 20px;
+    width: 100%;
+  }
+
+  div#wrap div#companyinfo div p span {
+    color: red;
+  }
+  div#wrap div#companyinfo div p.special_tit {
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  div#wrap div#companyinfo div p span.b_line {
+    color: #fff;
+    border-bottom: 1px solid red;
+  }
+
+  div#wrap div#companyinfo,
+  div#privacy,
+  div#lcinfo,
+  div#terms,
+  div#sitemap {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  /* 각 페이지 타이틀 */
+  div#companyinfo h2,
+  div#maps h2,
+  div#privacy h2,
+  div#lcinfo h2,
+  div#terms h2,
+  div#sitemap h2 {
+    font-size: 2em;
+  }
+
+  /* 이용약관, 위치기반서비스 이용약관, 개인정보처리방침 내부 div css */
+  div#wrap div#privacy div,
+  div#lcinfo div,
+  div#terms div,
+  div#sitemap div {
+    overflow: auto;
+    width: 100%;
+    height: 300px;
+    padding: 30px;
+    background-color: #000;
+    line-height: 200%;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  /* kakao API map */
+  div#maps {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  div#maps div#map {
+    width: 100%;
+    height: 300px;
+  }
+
+  div#maps div#map a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  img.markk {
+    width: 120px;
+    margin: 10px;
+  }
+  span.mapBranch {
+    display: block;
+    color: #181818;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 768px) {
+  /* 공통 */
+  .center {
+    text-align: center;
+  }
+  .f_1_5em {
+    font-size: 1.2em;
+  }
+
+  /* Support 영역 */
+  .support_bg {
+    background: url("../images/supportbg.png") no-repeat;
+  }
+  div#wrap div#support {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  /* 로케이션 타이틀 */
+  div#wrap div#support p {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: red;
+  }
+  div#wrap div#support > p > a,
+  a:hover,
+  a:visited {
+    color: #ddd;
+  }
+
+  /* 메뉴 css */
+  div#wrap div#support ol li {
+    float: left;
+    margin: 0 auto;
+    padding-right: 30px;
+  }
+  div#wrap div#support ol li:first-child {
+    padding-left: 10px;
+  }
+  div#wrap div#support ol li:last-child {
+    display: none;
+  }
+
+  div#wrap div#support ol li a,
+  a:visited,
+  a:active {
+    color: bisque;
+    font-weight: none;
+  }
+  div#wrap div#support ol li a:hover {
+    text-decoration: underline;
+  }
+  /* 회사소개 */
+  div#wrap div#companyinfo div {
+    width: 100%;
+    min-height: 500px;
+    padding: 80px;
+    line-height: 200%;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #000;
+    opacity: 0.8;
+  }
+
+  /* 내부 큰 타이틀 */
+  div#wrap div#companyinfo div h3 {
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: red;
+    border-bottom: 2px solid red;
+    display: block;
+    width: 100%;
+  }
+  div#wrap div#companyinfo div p {
+    padding: 10px;
+  }
+  /* 내부 작은 타이틀 */
+  div#wrap div#companyinfo div h5 {
+    color: red;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  div#wrap div#companyinfo img {
+    display: block;
+    padding: 20px;
+    width: 100%;
+  }
+
+  div#wrap div#companyinfo div p span {
+    color: red;
+  }
+  div#wrap div#companyinfo div p.special_tit {
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  div#wrap div#companyinfo div p span.b_line {
+    color: #fff;
+    border-bottom: 1px solid red;
+  }
+
+  div#wrap div#companyinfo,
+  div#privacy,
+  div#lcinfo,
+  div#terms,
+  div#sitemap {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  /* 각 페이지 타이틀 */
+  div#companyinfo h2,
+  div#maps h2,
+  div#privacy h2,
+  div#lcinfo h2,
+  div#terms h2,
+  div#sitemap h2 {
+    font-size: 2.5em;
+  }
+
+  /* 이용약관, 위치기반서비스 이용약관, 개인정보처리방침 내부 div css */
+  div#wrap div#privacy div,
+  div#lcinfo div,
+  div#terms div,
+  div#sitemap div {
+    overflow: auto;
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+    background-color: #000;
+    line-height: 200%;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0.8;
+  }
+
+  /* kakao API map */
+  div#maps {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  div#maps div#map {
+    width: 100%;
+    height: 400px;
+  }
+
+  div#maps div#map a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  img.markk {
+    width: 120px;
+    margin: 10px;
+  }
+  span.mapBranch {
+    display: block;
+    color: #181818;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 1024px) {
+  /* 공통 */
+  .center {
+    text-align: center;
+  }
+  .f_1_5em {
+    font-size: 1.5em;
+  }
+
+  /* Support 영역 */
+  .support_bg {
+    background: url("../images/supportbg.png") no-repeat;
+  }
+  div#wrap div#support {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  /* 로케이션 타이틀 */
+  div#wrap div#support p {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: red;
+  }
+  div#wrap div#support > p > a,
+  a:hover,
+  a:visited {
+    color: #ddd;
+  }
+
+  /* 메뉴 css */
+  div#wrap div#support ol li {
+    float: left;
+    margin: 0 auto;
+    padding-right: 40px;
+  }
+  div#wrap div#support ol li:first-child {
+    padding-left: 10px;
+  }
+  div#wrap div#support ol li:last-child {
+    display: none;
+  }
+  div#wrap div#support ol li a,
+  a:visited,
+  a:active {
+    color: bisque;
+    font-weight: none;
+  }
+  div#wrap div#support ol li a:hover {
+    text-decoration: underline;
+  }
+  /* 회사소개 */
+  div#wrap div#companyinfo div {
+    width: 100%;
+    min-height: 500px;
+    padding: 80px;
+    line-height: 200%;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #000;
+    opacity: 0.8;
+  }
+
+  /* 내부 큰 타이틀 */
+  div#wrap div#companyinfo div h3 {
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: red;
+    border-bottom: 2px solid red;
+    display: block;
+    width: 100%;
+  }
+  div#wrap div#companyinfo div p {
+    padding: 10px;
+  }
+  /* 내부 작은 타이틀 */
+  div#wrap div#companyinfo div h5 {
+    color: red;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+  div#wrap div#companyinfo img {
+    display: block;
+    padding: 20px;
+    width: 100%;
+  }
+
+  div#wrap div#companyinfo div p span {
+    color: red;
+  }
+  div#wrap div#companyinfo div p.special_tit {
+    font-size: 3em;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  div#wrap div#companyinfo div p span.b_line {
+    color: #fff;
+    border-bottom: 1px solid red;
+  }
+
+  div#wrap div#companyinfo,
+  div#privacy,
+  div#lcinfo,
+  div#terms,
+  div#sitemap {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  /* 이용약관, 위치기반서비스 이용약관, 개인정보처리방침 내부 div css */
+  div#wrap div#privacy div,
+  div#lcinfo div,
+  div#terms div,
+  div#sitemap div {
+    overflow: auto;
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+    background-color: #000;
+    line-height: 200%;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0.8;
+  }
+
+  /* kakao API map */
+  div#maps {
+    display: flow-root;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  div#maps div#map {
+    width: 100%;
+    height: 500px;
+  }
+
+  div#maps div#map a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  img.markk {
+    width: 120px;
+    margin: 10px;
+  }
+  span.mapBranch {
+    display: block;
+    color: #181818;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}

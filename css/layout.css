@@ -1,0 +1,293 @@
+@media (max-width: 399px) {
+  div#wrap {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  div#wrap header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Article 영역 (롤링 뉴스) */
+  div#wrap div#article {
+    display: none;
+  }
+  /*  div#wrap div#article {
+    position: absolute;
+    top: 1100px;
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 17px 15px;
+    overflow: hidden;
+  }
+  div#wrap div#article .para {
+    white-space: nowrap;
+    clear: both;
+    float: left;
+  }
+
+  div#wrap div#article .para a,
+  a.articale_link {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  div#wrap div#article span {
+    color: #fff;
+  } */
+
+  /** Contents 영역 **/
+  /* top 10 movie 영역 */
+  div#wrap div#contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -200px;
+    max-height: 400px;
+  }
+
+  /** Footer 영역(전체) **/
+  div#wrap footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+
+  /* search.html 푸터 영역 */
+  div#wrap footer.search {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    margin-top: 0px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  div#wrap {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  div#wrap header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Article 영역 (롤링 뉴스) */
+  div#wrap div#article {
+    display: none;
+  }
+
+  /* div#wrap div#article {
+    position: absolute;
+    top: 1100px;
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 17px 15px;
+    overflow: hidden;
+  }
+  div#wrap div#article .para {
+    white-space: nowrap;
+    clear: both;
+    float: left;
+  }
+
+  div#wrap div#article .para a,
+  a.articale_link {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  div#wrap div#article span {
+    color: #fff;
+  } */
+
+  /** Contents 영역 **/
+  /* top 10 movie 영역 */
+  div#wrap div#contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -250px;
+    max-height: 550px;
+  }
+  /** Footer 영역(전체) **/
+  div#wrap footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+
+  /* search.html 푸터 영역 */
+  div#wrap footer.search {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    margin-top: 0px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  div#wrap {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  div#wrap header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Article 영역 (롤링 뉴스) */
+  div#wrap div#article {
+    position: absolute;
+    top: 1100px;
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 17px 15px;
+    overflow: hidden;
+  }
+  div#wrap div#article .para {
+    white-space: nowrap;
+    clear: both;
+    float: left;
+  }
+
+  div#wrap div#article .para a,
+  a.articale_link {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  div#wrap div#article span {
+    color: #fff;
+  }
+
+  /** Contents 영역 **/
+  /* top 10 movie 영역 */
+  div#wrap div#contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+    max-height: 500px;
+  }
+
+  /** Footer 영역(전체) **/
+  div#wrap footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    margin-top: 80px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+
+  /* search.html 푸터 영역 */
+  div#wrap footer.search {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    margin-top: 0px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  div#wrap {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  div#wrap header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Article 영역 (롤링 뉴스) */
+  div#wrap div#article {
+    position: absolute;
+    top: 1100px;
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 17px 15px;
+    overflow: hidden;
+  }
+  div#wrap div#article .para {
+    white-space: nowrap;
+    clear: both;
+    float: left;
+  }
+
+  div#wrap div#article .para a,
+  a.articale_link {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  div#wrap div#article span {
+    color: #fff;
+  }
+
+  /** Contents 영역 **/
+  /* top 10 movie 영역 */
+  div#wrap div#contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /** Footer 영역(전체) **/
+  div#wrap footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    margin-top: 80px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+
+  /* search.html 푸터 영역 */
+  div#wrap footer.search {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    margin-top: 0px;
+    background-color: #1f1f1f;
+    text-align: center;
+  }
+}

@@ -1,0 +1,648 @@
+/*############################################################
+* 로그인 css
+* @author TEAM-ONE BY 정미
+* 2023.10.11 ~
+############################################################*/
+
+@media (max-width: 399px) {
+  /*회원로그인영역*/
+  div#loginWrap {
+    display: none; /*로그인영역 숨김처리*/
+  }
+
+  /* 10.24수정 */
+  div#modalWrapping {
+    z-index: 1004;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 10.24 수정 Login Background bg 반투명용 div */
+  div#loginWrap div#bgs {
+    z-index: 1001;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background: url(../images/loginbg3.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  /* 10.24 수정 로그인창 닫기*/
+  div#modalWrapping button.loginClose {
+    z-index: 1003;
+    position: relative;
+    top: -190px;
+    right: -350px;
+    width: 35px;
+    height: 35px;
+    font-size: 120%;
+    font-weight: 500;
+    color: 181818;
+    background-color: red;
+    border: none;
+    border-top-right-radius: 20px;
+    opacity: 0.3; /*반투명*/
+  }
+  /*로그인영역*/
+  div#memberLogin {
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    min-height: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+  }
+  /* 로고 */
+  img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
+  /* 로그인 타이틀 */
+  h2 {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  /* 아이디, 패스워드 인풋박스 */
+  .input-box {
+    position: relative;
+    width: 250px;
+    margin: 20px auto;
+  }
+  /* 라벨 css */
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -2px;
+  }
+
+  /*로그인스타일*/
+  .input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+  }
+  .input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+  }
+  .remember-forgot {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .remember-forgot label input {
+    margin-right: 3px;
+  }
+  .remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+  .register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+  .register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .register-link p a:hover {
+    text-decoration: underline;
+  }
+  #memberLogin button {
+    width: 250px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  /*회원로그인영역*/
+  div#loginWrap {
+    display: none; /*로그인영역 숨김처리*/
+  }
+
+  /* 10.24수정 */
+  div#modalWrapping {
+    z-index: 1004;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 10.24 수정 Login Background bg 반투명용 div */
+  div#loginWrap div#bgs {
+    z-index: 1001;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/loginbg3.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  /* 10.24 수정 로그인창 닫기*/
+  div#modalWrapping button.loginClose {
+    z-index: 1003;
+    position: relative;
+    top: -190px;
+    right: -350px;
+    width: 35px;
+    height: 35px;
+    font-size: 120%;
+    font-weight: 500;
+    color: 181818;
+    background-color: red;
+    border: none;
+    border-top-right-radius: 20px;
+    opacity: 0.3; /*반투명*/
+  }
+  /*로그인영역*/
+  div#memberLogin {
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+  }
+  /* 로고 */
+  img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
+  /* 로그인 타이틀 */
+  h2 {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  /* 아이디, 패스워드 인풋박스 */
+  .input-box {
+    position: relative;
+    width: 250px;
+    margin: 20px auto;
+  }
+  /* 라벨 css */
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -2px;
+  }
+
+  /*로그인스타일*/
+  .input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+  }
+  .input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+  }
+  .remember-forgot {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .remember-forgot label input {
+    margin-right: 3px;
+  }
+  .remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+  .register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+  .register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .register-link p a:hover {
+    text-decoration: underline;
+  }
+  #memberLogin button {
+    width: 250px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+@media (min-width: 768px) {
+  /*회원로그인영역*/
+  div#loginWrap {
+    display: none; /*로그인영역 숨김처리*/
+  }
+
+  /* 10.24수정 */
+  div#modalWrapping {
+    z-index: 1004;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 10.24 수정 Login Background bg 반투명용 div */
+  div#loginWrap div#bgs {
+    z-index: 1001;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/loginbg3.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  /* 10.24 수정 로그인창 닫기*/
+  div#modalWrapping button.loginClose {
+    z-index: 1003;
+    position: relative;
+    top: -240px;
+    right: -600px;
+    width: 35px;
+    height: 35px;
+    font-size: 120%;
+    font-weight: 500;
+    color: 181818;
+    background-color: red;
+    border: none;
+    border-top-right-radius: 20px;
+    opacity: 0.3; /*반투명*/
+  }
+  /*로그인영역*/
+  div#memberLogin {
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 520px;
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+  }
+  /* 로고 */
+  img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* 로그인 타이틀 */
+  h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  /* 아이디, 패스워드 인풋박스 */
+  .input-box {
+    position: relative;
+    width: 400px;
+    margin: 30px 0;
+  }
+  /* 라벨 css */
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -5px;
+  }
+
+  /*로그인스타일*/
+  .input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+  }
+  .input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+  }
+  .remember-forgot {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .remember-forgot label input {
+    margin-right: 3px;
+  }
+  .remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+  .register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+  .register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .register-link p a:hover {
+    text-decoration: underline;
+  }
+  #memberLogin button {
+    width: 400px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1024px) {
+  /*회원로그인영역*/
+  div#loginWrap {
+    display: none; /*로그인영역 숨김처리*/
+  }
+
+  /* 10.24수정 */
+  div#modalWrapping {
+    z-index: 1004;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 10.24 수정 Login Background bg 반투명용 div */
+  div#loginWrap div#bgs {
+    z-index: 1001;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/loginbg3.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  /* 10.24 수정 로그인창 닫기*/
+  div#modalWrapping button.loginClose {
+    z-index: 1003;
+    position: relative;
+    top: -240px;
+    right: -800px;
+    width: 35px;
+    height: 35px;
+    font-size: 120%;
+    font-weight: 500;
+    color: 181818;
+    background-color: red;
+    border: none;
+    border-top-right-radius: 20px;
+    opacity: 0.3; /*반투명*/
+  }
+  /*로그인영역*/
+  div#memberLogin {
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 520px;
+    background: transparent;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+  }
+  /* 로고 */
+  img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* 로그인 타이틀 */
+  h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  /* 아이디, 패스워드 인풋박스 */
+  .input-box {
+    position: relative;
+    width: 400px;
+    margin: 30px 0;
+  }
+  /* 라벨 css */
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -5px;
+  }
+
+  /*로그인스타일*/
+  .input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+  }
+  .input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+  }
+  .remember-forgot {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .remember-forgot label input {
+    margin-right: 3px;
+  }
+  .remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+  .register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+  .register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .register-link p a:hover {
+    text-decoration: underline;
+  }
+  #memberLogin button {
+    width: 400px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}

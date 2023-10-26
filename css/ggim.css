@@ -1,0 +1,828 @@
+/* 찜 목록 타이틀 */
+@media (min-width: 1024px) {
+  .my_ggim h1 {
+    white-space: normal;
+    border-left: 5px solid red;
+    padding-left: 15px;
+    margin: 200px 200px 50px 200px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /* 찜 목록이 담길 전체 div */
+  #ggim_Wrap {
+    padding: 5px;
+    border: 0px solid yellow;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .ggimList {
+    width: 28%;
+    padding: 10px;
+    position: relative;
+    border: 0px solid black;
+    height: 230px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  #ggim_Wrap .ggimList img {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 210px;
+    border-radius: 5px;
+  }
+  /* 좌측으로 움직이는 타이틀 */
+  .ggim_title {
+    top: 44px;
+    z-index: 1;
+    right: 5px;
+    text-align: left;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    border: 0px solid red;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    animation: marquee 6s linear infinite;
+  }
+  h2 {
+    width: 50%;
+  }
+
+  @keyframes marquee {
+    0% {
+      text-indent: 100%;
+    }
+    100% {
+      text-indent: -100%;
+    }
+  }
+  .ggim_coment {
+    display: inline-block;
+    position: absolute;
+    top: 98px;
+    right: 5px;
+    text-align: left;
+    width: 45%;
+    height: 120px;
+    border: 1px solid white;
+    background-color: #333;
+    color: #ccc;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+    overflow: hidden;
+  }
+  .ggim_del {
+    position: absolute;
+    top: 13px;
+    right: 0px;
+    padding: 5px 5px;
+    color: red;
+    font-size: 1.3em;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+  }
+  .ggimList label {
+    position: absolute;
+    top: 0px;
+    display: block;
+    right: 35px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    border: 0px solid red;
+    text-indent: -999999px;
+  }
+  .ggimList .checkBox {
+    margin: 10px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 1 !important;
+  }
+
+  #clear {
+    clear: both;
+  }
+
+  #del_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+  }
+  /* 전체삭제 버튼 */
+  #all_select {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 삭제 버튼 */
+  #checked_del {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 찜 목록이 없을때 보여질 div */
+  #tung {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+    font-size: 60px;
+    background-color: black;
+    margin-bottom: 50px;
+    color: white;
+  }
+}
+/* ----------------------------------------------------테블릿-------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .my_ggim h1 {
+    white-space: normal;
+    border-left: 5px solid red;
+    padding-left: 15px;
+    margin: 200px 200px 50px 200px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /* 찜 목록이 담길 전체 div */
+  #ggim_Wrap {
+    padding: 5px;
+    border: 0px solid yellow;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .ggimList {
+    width: 46%;
+    padding: 10px;
+    position: relative;
+    border: 0px solid black;
+    height: 230px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  #ggim_Wrap .ggimList img {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 210px;
+    border-radius: 5px;
+  }
+  /* 좌측으로 움직이는 타이틀 */
+  .ggim_title {
+    top: 44px;
+    z-index: 1;
+    right: 5px;
+    text-align: left;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    border: 0px solid red;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    animation: marquee 6s linear infinite;
+  }
+  h2 {
+    width: 50%;
+  }
+
+  @keyframes marquee {
+    0% {
+      text-indent: 100%;
+    }
+    100% {
+      text-indent: -100%;
+    }
+  }
+  .ggim_coment {
+    display: inline-block;
+    position: absolute;
+    top: 98px;
+    right: 5px;
+    text-align: left;
+    width: 44%;
+    height: 120px;
+    border: 1px solid white;
+    background-color: #333;
+    color: #ccc;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+    overflow: hidden;
+  }
+  .ggim_del {
+    position: absolute;
+    top: 13px;
+    right: 0px;
+    padding: 5px 5px;
+    color: red;
+    font-size: 1.3em;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+  }
+  .ggimList label {
+    position: absolute;
+    top: 0px;
+    display: block;
+    right: 35px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    border: 0px solid red;
+    text-indent: -999999px;
+  }
+  .ggimList .checkBox {
+    margin: 10px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 1 !important;
+  }
+
+  #clear {
+    clear: both;
+  }
+
+  #del_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+  }
+  /* 전체삭제 버튼 */
+  #all_select {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 삭제 버튼 */
+  #checked_del {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 찜 목록이 없을때 보여질 div */
+  #tung {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+    font-size: 60px;
+    background-color: black;
+    margin-bottom: 50px;
+    color: white;
+  }
+}
+/*----------------------------------------------------------------- 모봐일--------------------------------------------------------------- */
+@media (min-width: 400px) and (max-width: 767px) {
+  .my_ggim h1 {
+    position: relative;
+    width: 100%;
+    white-space: normal;
+    border-left: 10px solid red;
+    padding-left: 15px;
+    margin: 200px 200px 50px 200px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /* 찜 목록이 담길 전체 div */
+  #ggim_Wrap {
+    padding: 5px;
+    border: 0px solid yellow;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .ggimList {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border: 0px solid black;
+    height: 230px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  #ggim_Wrap .ggimList img {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 210px;
+    border-radius: 5px;
+  }
+  /* 좌측으로 움직이는 타이틀 */
+  .ggim_title {
+    top: 44px;
+    z-index: 1;
+    right: 5px;
+    text-align: left;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    border: 0px solid red;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    animation: marquee 6s linear infinite;
+  }
+  h2 {
+    width: 50%;
+  }
+
+  @keyframes marquee {
+    0% {
+      text-indent: 100%;
+    }
+    100% {
+      text-indent: -100%;
+    }
+  }
+  .ggim_coment {
+    display: inline-block;
+    position: absolute;
+    top: 98px;
+    right: 5px;
+    text-align: left;
+    width: 45%;
+    height: 120px;
+    border: 1px solid white;
+    background-color: #333;
+    color: #ccc;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+    overflow: hidden;
+  }
+  .ggim_del {
+    position: absolute;
+    top: 13px;
+    right: 0px;
+    padding: 5px 5px;
+    color: red;
+    font-size: 1.3em;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+  }
+  .ggimList label {
+    position: absolute;
+    top: 0px;
+    display: block;
+    right: 35px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    border: 0px solid red;
+    text-indent: -999999px;
+  }
+  .ggimList .checkBox {
+    margin: 10px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 1 !important;
+  }
+
+  #clear {
+    clear: both;
+  }
+
+  #del_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+  }
+  /* 전체삭제 버튼 */
+  #all_select {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 삭제 버튼 */
+  #checked_del {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 찜 목록이 없을때 보여질 div */
+  #tung {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+    font-size: 60px;
+    background-color: black;
+    margin-bottom: 50px;
+    color: white;
+  }
+}
+
+/*----------------------------------------------------------------- 모봐일--------------------------------------------------------------- */
+@media (min-width: 400px) and (max-width: 767px) {
+  .my_ggim {
+    width: 50%;
+  }
+  .my_ggim h1 {
+    position: relative;
+    width: 100%;
+    white-space: normal;
+    border-left: 10px solid red;
+    padding-left: 15px;
+    margin: 200px 200px 50px 200px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /* 찜 목록이 담길 전체 div */
+  #ggim_Wrap {
+    padding: 5px;
+    border: 0px solid yellow;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .ggimList {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border: 0px solid black;
+    height: 230px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  #ggim_Wrap .ggimList img {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 190px;
+    border-radius: 5px;
+  }
+  /* 좌측으로 움직이는 타이틀 */
+  .ggim_title {
+    top: 44px;
+    z-index: 1;
+    right: 5px;
+    text-align: left;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    border: 0px solid red;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    animation: marquee 6s linear infinite;
+  }
+  h2 {
+    width: 50%;
+  }
+
+  @keyframes marquee {
+    0% {
+      text-indent: 100%;
+    }
+    100% {
+      text-indent: -100%;
+    }
+  }
+  .ggim_coment {
+    display: inline-block;
+    position: absolute;
+    top: 98px;
+    right: 5px;
+    text-align: left;
+    width: 45%;
+    height: 120px;
+    border: 1px solid white;
+    background-color: #333;
+    color: #ccc;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+    overflow: hidden;
+  }
+  .ggim_del {
+    position: absolute;
+    top: 13px;
+    right: 0px;
+    padding: 5px 5px;
+    color: red;
+    font-size: 1.3em;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+  }
+  .ggimList label {
+    position: absolute;
+    top: 0px;
+    display: block;
+    right: 35px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    border: 0px solid red;
+    text-indent: -999999px;
+  }
+  .ggimList .checkBox {
+    margin: 10px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 1 !important;
+  }
+
+  #clear {
+    clear: both;
+  }
+
+  #del_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+  }
+  /* 전체삭제 버튼 */
+  #all_select {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 삭제 버튼 */
+  #checked_del {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  /* 찜 목록이 없을때 보여질 div */
+  #tung {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+    font-size: 24px;
+    background-color: black;
+    margin-bottom: 50px;
+    color: white;
+  }
+}
+
+@media (max-width: 399px) {
+  .my_ggim h1 {
+    position: relative;
+    left: -150px;
+    width: 100%;
+    white-space: normal;
+    border-left: 5px solid red;
+    padding-left: 15px;
+    margin: 200px 200px 50px 200px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /* 찜 목록이 담길 전체 div */
+  #ggim_Wrap {
+    padding: 5px;
+    border: 0px solid yellow;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .ggimList {
+    width: 95%;
+    padding: 10px;
+    position: relative;
+    border: 0px solid black;
+    height: 230px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  #ggim_Wrap .ggimList img {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 48%;
+    height: 190px;
+    border-radius: 5px;
+  }
+  /* 좌측으로 움직이는 타이틀 */
+  .ggim_title {
+    top: 44px;
+    z-index: 1;
+    right: 5px;
+    text-align: left;
+    position: absolute;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    border: 0px solid red;
+    width: 130px;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    animation: marquee 6s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      text-indent: 100%;
+    }
+    100% {
+      text-indent: -100%;
+    }
+  }
+  .ggim_coment {
+    display: inline-block;
+    position: absolute;
+    top: 98px;
+    right: 5px;
+    text-align: left;
+    width: 44%;
+    height: 120px;
+    border: 1px solid white;
+    background-color: #333;
+    color: #ccc;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+    overflow: hidden;
+  }
+  .ggim_del {
+    position: absolute;
+    top: 13px;
+    right: 0px;
+    padding: 5px 5px;
+    color: red;
+    font-size: 1.3em;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+  }
+  .ggimList label {
+    position: absolute;
+    top: 0px;
+    display: block;
+    right: 35px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    border: 0px solid red;
+    text-indent: -999999px;
+  }
+  .ggimList .checkBox {
+    margin: 10px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 1 !important;
+  }
+
+  #clear {
+    clear: both;
+  }
+
+  #del_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+  }
+  /* 전체삭제 버튼 */
+  #all_select {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.8em;
+  }
+  /* 삭제 버튼 */
+  #checked_del {
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.8em;
+  }
+  /* 찜 목록이 없을때 보여질 div */
+  #tung {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+    font-size: 24px;
+    background-color: black;
+    margin-bottom: 50px;
+    color: white;
+  }
+}
